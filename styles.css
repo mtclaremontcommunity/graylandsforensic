@@ -178,16 +178,12 @@ section { padding: 8px 0 32px; }
 
 .card { background: var(--panel); border: 1px solid var(--hairline); border-radius: 10px; padding: 24px; margin-bottom: 16px; }
 
-.concern-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin: 28px 0; }
-@media (max-width: 700px) { .concern-grid { grid-template-columns: 1fr; } }
-.concern-card {
-  background: var(--panel); border: 1px solid var(--hairline); border-radius: 10px;
-  padding: 20px; text-decoration: none; color: var(--ink); display: block;
+.cc-more {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.82rem; font-weight: 600;
+  color: var(--brick); text-decoration: none;
 }
-.concern-card:hover { border-color: var(--brick); }
-.concern-card .n { font-family: 'IBM Plex Mono', monospace; color: var(--brick); font-size: 0.82rem; font-weight: 500; }
-.concern-card h4 { margin: 6px 0 4px; font-size: 1.05rem; }
-.concern-card p { font-size: 0.92rem; color: var(--slate); margin: 0; }
+.cc-more:hover { text-decoration: underline; }
 
 .concern-full { padding: 28px 0 36px; border-top: 1px solid var(--hairline); }
 .concern-full:first-of-type { border-top: none; }
