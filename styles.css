@@ -127,6 +127,13 @@ nav.links a.nav-petition:hover { background: #833a28; border-bottom-color: trans
 
 .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
 .cta-lead { font-size: 1.05rem; font-weight: 600; margin: 22px 0 0; color: var(--ink); }
+.cta-footnote { font-size: 0.92rem; color: var(--slate); margin: 14px 0 0; }
+.cta-footnote a { color: var(--brick); font-weight: 600; }
+.snapshot-secondary { font-size: 0.92rem; color: var(--slate); margin: 10px 0 0; }
+.snapshot-secondary a { color: var(--brick); font-weight: 600; }
+.privacy-note ul { margin: 10px 0 0; padding-left: 20px; }
+.privacy-note li { margin-bottom: 8px; font-size: 0.94rem; }
+.privacy-note li:last-child { margin-bottom: 0; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 0.95rem;
