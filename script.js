@@ -8,7 +8,34 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   loadUpdates();
+  injectMobilePetitionBar();
+  openConcernFromHash();
 });
+
+var PETITION_URL = 'https://www.change.org/p/graylands-forensic-campus-expansion';
+
+/* Small always-visible mobile CTA — the header nav-petition button is hidden
+   inside the hamburger menu on small screens, and most petition traffic
+   arrives on mobile (WhatsApp), so it needs its own persistent entry point. */
+function injectMobilePetitionBar() {
+  if (document.querySelector('.mobile-petition-bar')) return;
+  var bar = document.createElement('div');
+  bar.className = 'mobile-petition-bar';
+  bar.innerHTML = '<a href="' + PETITION_URL + '" target="_blank" rel="noopener">Sign the petition</a>';
+  document.body.appendChild(bar);
+}
+
+/* If arriving at concerns.html#concern-3 (e.g. from the homepage teaser grid),
+   open that specific card automatically instead of leaving it collapsed. */
+function openConcernFromHash() {
+  var hash = window.location.hash;
+  if (!hash) return;
+  var target = document.querySelector(hash);
+  if (target && target.tagName === 'DETAILS') {
+    target.open = true;
+    setTimeout(function () { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 50);
+  }
+}
 
 /* ---------- Latest updates feed ----------
    Reads updates.json at runtime, so posting a new update is a one-file edit
