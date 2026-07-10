@@ -88,6 +88,14 @@ nav.links a.nav-petition {
 }
 nav.links a.nav-petition:hover { background: #833a28; border-bottom-color: transparent; }
 
+.nav-cta-group { display: flex; align-items: center; gap: 6px; }
+nav.links a.nav-register {
+  font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; font-weight: 600;
+  color: var(--brick); border: 1px solid var(--brick); border-bottom: 1px solid var(--brick);
+  padding: 7px 10px; border-radius: 5px; white-space: nowrap;
+}
+nav.links a.nav-register:hover { background: var(--brick-tint); border-bottom-color: var(--brick); }
+
 @media (max-width: 820px) {
   .nav-toggle { display: block; }
   nav.links {
@@ -98,6 +106,8 @@ nav.links a.nav-petition:hover { background: #833a28; border-bottom-color: trans
   nav.links.open { display: flex; }
   nav.links a { padding: 12px 4px; border-bottom: 1px solid var(--hairline); border-radius: 0; }
   nav.links a.nav-petition { margin: 8px 0 0; text-align: center; }
+  .nav-cta-group { flex-direction: column; align-items: stretch; gap: 8px; }
+  nav.links a.nav-register { text-align: center; margin: 0; border-bottom: 1px solid var(--brick); }
 }
 
 /* ---------- Hero ---------- */
@@ -127,10 +137,6 @@ nav.links a.nav-petition:hover { background: #833a28; border-bottom-color: trans
 
 .cta-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
 .cta-lead { font-size: 1.05rem; font-weight: 600; margin: 22px 0 0; color: var(--ink); }
-.cta-footnote { font-size: 0.92rem; color: var(--slate); margin: 14px 0 0; }
-.cta-footnote a { color: var(--brick); font-weight: 600; }
-.snapshot-secondary { font-size: 0.92rem; color: var(--slate); margin: 10px 0 0; }
-.snapshot-secondary a { color: var(--brick); font-weight: 600; }
 .privacy-note ul { margin: 10px 0 0; padding-left: 20px; }
 .privacy-note li { margin-bottom: 8px; font-size: 0.94rem; }
 .privacy-note li:last-child { margin-bottom: 0; }
@@ -144,10 +150,15 @@ nav.links a.nav-petition:hover { background: #833a28; border-bottom-color: trans
 .btn-primary:hover { background: #833a28; }
 .btn-secondary { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn-secondary:hover { background: var(--ink); color: var(--paper); }
+.btn-register { background: transparent; color: var(--brick); border-color: var(--brick); }
+.btn-register:hover { background: var(--brick); color: #fff; }
 .btn-shout {
   font-size: 1.05rem; padding: 15px 28px; box-shadow: 0 3px 0 #6f331f;
 }
 .btn-shout:hover { box-shadow: 0 2px 0 #6f331f; transform: translateY(1px); }
+.cta-row-tertiary { margin-top: 10px; }
+.snapshot-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+.petition-strip-actions { display: flex; gap: 10px; flex-wrap: wrap; flex-shrink: 0; }
 
 /* ---------- Non-partisan banner ---------- */
 .banner {
@@ -184,6 +195,15 @@ section { padding: 8px 0 32px; }
 .hairline { border: none; border-top: 1px solid var(--hairline); margin: 40px 0; }
 
 .card { background: var(--panel); border: 1px solid var(--hairline); border-radius: 10px; padding: 24px; margin-bottom: 16px; }
+
+.action-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 8px 0 16px; }
+@media (max-width: 700px) { .action-pair { grid-template-columns: 1fr; } }
+.action-card { margin-bottom: 0; display: flex; flex-direction: column; }
+.action-card h3 { margin: 8px 0 8px; }
+.action-card p { flex-grow: 1; }
+.action-card .btn { align-self: flex-start; margin-top: 4px; }
+.action-card-register { border-color: var(--brick); }
+.verified-tag-register { color: var(--brick); background: var(--brick-tint); }
 
 .cc-more {
   display: inline-flex; align-items: center; gap: 4px;
@@ -245,16 +265,23 @@ details.concern-card-expand[open] summary::after { content: '\2212'; }
 /* ---------- Mobile-only persistent petition bar (injected by script.js) ---------- */
 .mobile-petition-bar {
   display: none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
-  background: var(--ink); padding: 10px 16px; box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+  background: var(--ink); padding: 10px 12px; box-shadow: 0 -2px 10px rgba(0,0,0,0.15);
+  gap: 8px; align-items: stretch;
 }
-.mobile-petition-bar a {
-  display: block; text-align: center; background: var(--brick); color: #fff;
+.mobile-petition-bar .mpb-primary {
+  flex: 1; text-align: center; background: var(--brick); color: #fff;
   font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; font-size: 0.98rem;
   padding: 13px; border-radius: 7px; text-decoration: none;
 }
+.mobile-petition-bar .mpb-register {
+  flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  text-align: center; background: transparent; color: #f2c4b3; border: 1px solid #e8a893;
+  font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 0.76rem;
+  padding: 6px 10px; border-radius: 7px; text-decoration: none; white-space: nowrap;
+}
 @media (max-width: 820px) {
-  .mobile-petition-bar { display: block; }
-  body { padding-bottom: 64px; }
+  .mobile-petition-bar { display: flex; }
+  body { padding-bottom: 68px; }
 }
 
 /* ---------- Citation chip: the site's signature device ---------- */
@@ -359,6 +386,8 @@ th { font-family: 'IBM Plex Mono', monospace; font-size: 0.74rem; text-transform
 .petition-strip p { color: var(--paper); margin: 0; font-size: 1rem; max-width: 46ch; }
 .petition-strip .btn-primary { background: var(--brick); flex-shrink: 0; }
 .petition-strip .btn-primary:hover { background: #c25a3e; }
+.petition-strip .btn-register { border-color: #e8a893; color: #f2c4b3; }
+.petition-strip .btn-register:hover { background: var(--brick); color: #fff; border-color: var(--brick); }
 
 /* ---------- Updates feed ---------- */
 .update-feed { margin: 28px 0; }
