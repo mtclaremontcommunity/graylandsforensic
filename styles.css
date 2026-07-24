@@ -378,6 +378,17 @@ th { font-family: 'IBM Plex Mono', monospace; font-size: 0.74rem; text-transform
 .callout { background: var(--brick-tint); border-left: 3px solid var(--brick); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; font-size: 0.95rem; }
 .callout p:last-child { margin-bottom: 0; }
 
+/* ---------- Exhibit: side-by-side quote comparison ---------- */
+.exhibit { background: var(--panel); border: 1px solid var(--hairline); border-radius: 10px; padding: 26px 28px; margin: 22px 0; }
+.exhibit-label { font-family: 'IBM Plex Mono', monospace; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate); margin-bottom: 8px; }
+.exhibit-quote { margin: 0 0 4px; padding-left: 16px; border-left: 3px solid var(--hairline); font-size: 1.05rem; line-height: 1.55; color: var(--ink); }
+.exhibit-quote-full { color: var(--slate); font-size: 0.98rem; }
+.exhibit-quote-full q, .exhibit-quote-full { font-style: normal; }
+.exhibit-however { color: var(--brick); font-weight: 700; font-style: normal; }
+.exhibit-source { font-size: 0.85rem; color: var(--slate); margin-top: 6px; }
+.exhibit-source a { color: var(--slate); }
+.exhibit-divider { font-size: 0.88rem; color: var(--ink); background: var(--paper); border-radius: 6px; padding: 10px 14px; margin: 18px 0; }
+
 /* ---------- Petition strip: reusable cross-referral banner ---------- */
 .petition-strip {
   display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;
