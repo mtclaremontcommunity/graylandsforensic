@@ -294,9 +294,10 @@ details.concern-card-expand[open] summary::after { content: '\2212'; }
 }
 a.cite:hover { background: #ecd7cf; text-decoration: none; }
 .cite::before { content: '↗'; opacity: 0.55; font-size: 0.68rem; }
-/* research-record citations: our own review is the primary record, no external link */
+/* research-record citations: link directly to the matching page of the downloadable research paper PDF */
 .cite.record { background: var(--verified-tint); color: #2f5140; border-color: #bcd0c2; }
 .cite.record::before { content: '§'; opacity: 0.6; }
+a.cite.record:hover { background: #d3e0d5; text-decoration: none; }
 
 .verified-tag {
   display: inline-flex; align-items: center; gap: 5px;
