@@ -57,7 +57,7 @@ function loadUpdates() {
   var previewEl = document.getElementById('update-preview');
   if (!feedEl && !previewEl) return;
 
-  fetch('updates.json')
+  fetch('updates.json', { cache: 'no-store' })
     .then(function (res) {
       if (!res.ok) throw new Error('updates.json returned ' + res.status);
       return res.json();
