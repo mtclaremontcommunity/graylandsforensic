@@ -89,6 +89,11 @@ function renderUpdateEntry(item) {
   var tagClass = 'tag-' + (item.tag || 'milestone');
   var tagLabel = UPDATE_TAG_LABELS[item.tag] || 'Update';
   var dateLabel = formatUpdateDate(item.date);
+  var linkHtml = '';
+  if (item.link) {
+    linkHtml = '<p><a class="cite" href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener">' +
+      escapeHtml(item.linkText || 'Read the source') + '</a></p>';
+  }
   return (
     '<div class="update-entry">' +
       '<div class="update-head">' +
@@ -97,6 +102,7 @@ function renderUpdateEntry(item) {
       '</div>' +
       '<h4>' + escapeHtml(item.title || '') + '</h4>' +
       '<p class="body-text">' + escapeHtml(item.body || '') + '</p>' +
+      linkHtml +
     '</div>'
   );
 }
