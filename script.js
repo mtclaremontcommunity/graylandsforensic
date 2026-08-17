@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   loadUpdates();
+  loadQons();
   injectMobilePetitionBar();
   openConcernFromHash();
 });
@@ -71,7 +72,6 @@ function loadUpdates() {
         } else {
           feedEl.innerHTML = items.map(renderUpdateEntry).join('');
         }
-        openUpdateFromHash();
       }
       if (previewEl) {
         var top = items.slice(0, 2);
@@ -90,16 +90,13 @@ function renderUpdateEntry(item) {
   var tagClass = 'tag-' + (item.tag || 'milestone');
   var tagLabel = UPDATE_TAG_LABELS[item.tag] || 'Update';
   var dateLabel = formatUpdateDate(item.date);
-  var idAttr = item.id ? ' id="update-' + escapeHtml(item.id) + '"' : '';
   var linkHtml = '';
   if (item.link) {
-    var isExternal = /^https?:\/\//i.test(item.link);
-    linkHtml = '<p><a class="cite" href="' + escapeHtml(item.link) + '"' +
-      (isExternal ? ' target="_blank" rel="noopener"' : '') + '>' +
+    linkHtml = '<p><a class="cite" href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener">' +
       escapeHtml(item.linkText || 'Read the source') + '</a></p>';
   }
   return (
-    '<div class="update-entry"' + idAttr + '>' +
+    '<div class="update-entry">' +
       '<div class="update-head">' +
         '<span class="update-tag ' + tagClass + '">' + escapeHtml(tagLabel) + '</span>' +
         '<span class="update-date">' + escapeHtml(dateLabel) + '</span>' +
@@ -111,21 +108,73 @@ function renderUpdateEntry(item) {
   );
 }
 
-/* If arriving at updates.html#update-<id> (e.g. from a doc-card on the
-   Correspondence page), scroll to and briefly highlight that entry. Unlike
-   openConcernFromHash(), this can't run at DOMContentLoaded — the feed isn't
-   in the DOM yet at that point — so loadUpdates() calls it once #update-feed
-   is actually populated. */
-function openUpdateFromHash() {
-  var hash = window.location.hash;
-  if (!hash) return;
-  var target = document.querySelector(hash);
-  if (target) {
-    setTimeout(function () {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      target.classList.add('update-highlight');
-    }, 50);
-  }
+/* ---------- Questions on Notice tracker ----------
+   Reads qons.json at runtime, same pattern as updates.json above.
+   Renders into #qon-feed (table body) and #qon-stats (summary counts),
+   whichever is present on the page. Adding a new question, or an answer
+   to an existing one, is a one-file edit to qons.json — no HTML change needed. */
+
+const PARLIAMENT_QON_BASE = 'https://www.parliament.wa.gov.au/parliament/pquest.nsf/viewLAPQuestByDate/';
+
+function loadQons() {
+  var bodyEl = document.getElementById('qon-feed');
+  var statsEl = document.getElementById('qon-stats');
+  if (!bodyEl && !statsEl) return;
+
+  fetch('qons.json', { cache: 'no-store' })
+    .then(function (res) {
+      if (!res.ok) throw new Error('qons.json returned ' + res.status);
+      return res.json();
+    })
+    .then(function (items) {
+      items = items.slice().sort(function (a, b) { return a.date < b.date ? 1 : -1; });
+
+      if (statsEl) {
+        var total = items.length;
+        var pending = items.filter(function (i) { return i.status === 'pending'; }).length;
+        var members = [...new Set(items.map(function (i) { return i.member; }))].filter(function(m){ return m.indexOf('pending') === -1; }).length;
+        statsEl.innerHTML =
+          '<div class="stat-card"><span class="num">' + total + '</span><span class="label">Questions tracked</span></div>' +
+          '<div class="stat-card"><span class="num">' + pending + '</span><span class="label">Currently unanswered</span></div>' +
+          '<div class="stat-card"><span class="num">' + (total - pending) + '</span><span class="label">Answered</span></div>' +
+          '<div class="stat-card"><span class="num">' + members + '</span><span class="label">MPs who have asked</span></div>';
+      }
+
+      if (bodyEl) {
+        if (!items.length) {
+          bodyEl.innerHTML = '<p class="update-empty">No questions tracked yet — check back soon.</p>';
+        } else {
+          bodyEl.innerHTML = items.map(renderQonEntry).join('');
+        }
+      }
+    })
+    .catch(function (err) {
+      var msg = '<p class="update-empty">The tracker couldn\'t be loaded right now.</p>';
+      if (bodyEl) bodyEl.innerHTML = msg;
+      console.error('Failed to load qons.json:', err);
+    });
+}
+
+function renderQonEntry(item) {
+  var statusClass = item.status === 'pending' ? 'tag-sent' : 'tag-reply';
+  var statusLabel = item.status === 'pending' ? 'Awaiting answer' : ('Answered ' + formatUpdateDate(item.answered_date));
+  var url = PARLIAMENT_QON_BASE + item.docId + '?opendocument';
+  var answerHtml = item.answer_summary
+    ? '<p class="body-text"><strong>Answer:</strong> ' + escapeHtml(item.answer_summary) + '</p>'
+    : '';
+  return (
+    '<div class="update-entry">' +
+      '<div class="update-head">' +
+        '<span class="update-tag ' + statusClass + '">' + escapeHtml(statusLabel) + '</span>' +
+        '<span class="update-date">' + escapeHtml(formatUpdateDate(item.date)) + '</span>' +
+      '</div>' +
+      '<h4>' + escapeHtml(item.qnum) + ' \u2014 ' + escapeHtml(item.topic) + '</h4>' +
+      '<p class="body-text" style="font-size:0.85rem;color:var(--slate);">Asked by ' + escapeHtml(item.member) + ' \u00b7 ' + escapeHtml(item.portfolio) + '</p>' +
+      '<p class="body-text">' + escapeHtml(item.question) + '</p>' +
+      answerHtml +
+      '<p><a class="cite" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">View on parliament.wa.gov.au</a></p>' +
+    '</div>'
+  );
 }
 
 function formatUpdateDate(iso) {
