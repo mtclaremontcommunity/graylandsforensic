@@ -420,6 +420,11 @@ th { font-family: 'IBM Plex Mono', monospace; font-size: 0.74rem; text-transform
 .update-entry h4 { margin: 4px 0 6px; font-size: 1.05rem; }
 .update-entry p { margin: 0; color: var(--slate); font-size: 0.95rem; }
 .update-entry p.body-text { color: var(--ink); }
+.update-entry.update-highlight { animation: update-highlight-fade 2.5s ease-out; }
+@keyframes update-highlight-fade {
+  0% { border-color: var(--brick); box-shadow: 0 0 0 3px var(--brick-tint); }
+  100% { border-color: var(--hairline); box-shadow: none; }
+}
 .update-loading, .update-empty { color: var(--slate); font-size: 0.95rem; padding: 12px 0; }
 .update-preview { margin: 24px 0; }
 .update-preview .update-entry { margin-bottom: 10px; }

@@ -71,6 +71,7 @@ function loadUpdates() {
         } else {
           feedEl.innerHTML = items.map(renderUpdateEntry).join('');
         }
+        openUpdateFromHash();
       }
       if (previewEl) {
         var top = items.slice(0, 2);
@@ -89,13 +90,16 @@ function renderUpdateEntry(item) {
   var tagClass = 'tag-' + (item.tag || 'milestone');
   var tagLabel = UPDATE_TAG_LABELS[item.tag] || 'Update';
   var dateLabel = formatUpdateDate(item.date);
+  var idAttr = item.id ? ' id="update-' + escapeHtml(item.id) + '"' : '';
   var linkHtml = '';
   if (item.link) {
-    linkHtml = '<p><a class="cite" href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener">' +
+    var isExternal = /^https?:\/\//i.test(item.link);
+    linkHtml = '<p><a class="cite" href="' + escapeHtml(item.link) + '"' +
+      (isExternal ? ' target="_blank" rel="noopener"' : '') + '>' +
       escapeHtml(item.linkText || 'Read the source') + '</a></p>';
   }
   return (
-    '<div class="update-entry">' +
+    '<div class="update-entry"' + idAttr + '>' +
       '<div class="update-head">' +
         '<span class="update-tag ' + tagClass + '">' + escapeHtml(tagLabel) + '</span>' +
         '<span class="update-date">' + escapeHtml(dateLabel) + '</span>' +
@@ -105,6 +109,23 @@ function renderUpdateEntry(item) {
       linkHtml +
     '</div>'
   );
+}
+
+/* If arriving at updates.html#update-<id> (e.g. from a doc-card on the
+   Correspondence page), scroll to and briefly highlight that entry. Unlike
+   openConcernFromHash(), this can't run at DOMContentLoaded — the feed isn't
+   in the DOM yet at that point — so loadUpdates() calls it once #update-feed
+   is actually populated. */
+function openUpdateFromHash() {
+  var hash = window.location.hash;
+  if (!hash) return;
+  var target = document.querySelector(hash);
+  if (target) {
+    setTimeout(function () {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      target.classList.add('update-highlight');
+    }, 50);
+  }
 }
 
 function formatUpdateDate(iso) {
