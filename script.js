@@ -92,7 +92,9 @@ function renderUpdateEntry(item) {
   var dateLabel = formatUpdateDate(item.date);
   var linkHtml = '';
   if (item.link) {
-    linkHtml = '<p><a class="cite" href="' + escapeHtml(item.link) + '" target="_blank" rel="noopener">' +
+    var isExternal = /^https?:\/\//i.test(item.link);
+    var targetAttr = isExternal ? ' target="_blank" rel="noopener"' : '';
+    linkHtml = '<p><a class="cite" href="' + escapeHtml(item.link) + '"' + targetAttr + '>' +
       escapeHtml(item.linkText || 'Read the source') + '</a></p>';
   }
   return (
