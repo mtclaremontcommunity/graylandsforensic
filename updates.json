@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026-08-17",
+    "tag": "sent",
+    "title": "Letter sent to the Office of the Chief Psychiatrist",
+    "body": "We wrote to Dr Nathan Gibson, WA’s Chief Psychiatrist — an independent statutory office under the Mental Health Act 2014, distinct from the Ministers and agencies already listed on this site. The letter asks whether the Office was involved in GRAFT or otherwise advised on the decision to retain Graylands as the preferred site, whether site suitability has been formally reviewed since the Criminal Law (Mental Impairment) Act 2023 came into force, what school- and community-specific risk, notification and emergency-response arrangements exist, and whether the Chief Psychiatrist would support an independent reassessment of the site. A written response was requested within 14 days."
+  },
+  {
     "date": "2026-08-15",
     "tag": "media",
     "title": "Petition covered in The Post",
@@ -8,8 +14,8 @@
   {
     "date": "2026-08-12",
     "tag": "media",
-    "title": "WAtoday covers the campaign: \u2018No one was told\u2019",
-    "body": "WAtoday published a report on the site-selection process and the change in leave conditions under the CLMI Act, with Paul speaking on the record. The government's comment in the piece closely echoes the same language already in Minister Carey's 24 July reply to us \u2014 the Taskforce history, the 'more than a decade' of planning \u2014 rather than addressing the specific points raised. The City of Nedlands confirmed a letter is going to the Department of Health this week seeking further information.",
+    "title": "WAtoday covers the campaign: ‘No one was told’",
+    "body": "WAtoday published a report on the site-selection process and the change in leave conditions under the CLMI Act, with Paul speaking on the record. The government's comment in the piece closely echoes the same language already in Minister Carey's 24 July reply to us — the Taskforce history, the 'more than a decade' of planning — rather than addressing the specific points raised. The City of Nedlands confirmed a letter is going to the Department of Health this week seeking further information.",
     "link": "https://www.watoday.com.au/national/western-australia/no-one-was-told-residents-push-back-on-graylands-expansion-20260811-p60nft.html",
     "linkText": "Read the article on WAtoday"
   },
@@ -67,5 +73,4 @@
     "title": "Letter sent to Nedlands Council",
     "body": "A letter went to the Nedlands Council Mayor, Councillors and Chief Executive Officer, raising our concerns and requesting for their support to raise these issues to the relevant authorities."
   }
-
 ]
