@@ -206,10 +206,12 @@ function loadQons() {
 function renderQonEntry(item) {
   var statusClass = item.status === 'pending' ? 'tag-sent' : 'tag-reply';
   var statusLabel = item.status === 'pending' ? 'Awaiting answer' : ('Answered ' + formatUpdateDate(item.answered_date));
-  var url = PARLIAMENT_QON_BASE + item.docId + '?opendocument';
+  var url = item.docId ? (PARLIAMENT_QON_BASE + item.docId + '?opendocument') : item.sourceUrl;
+  var linkLabel = item.docId ? 'View on parliament.wa.gov.au' : 'View source Hansard record';
   var answerHtml = item.answer_summary
     ? '<p class="body-text"><strong>Answer:</strong> ' + escapeHtml(item.answer_summary) + '</p>'
     : '';
+  var linkHtml = url ? ('<p><a class="cite" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + linkLabel + '</a></p>') : '';
   return (
     '<div class="update-entry">' +
       '<div class="update-head">' +
@@ -220,7 +222,7 @@ function renderQonEntry(item) {
       '<p class="body-text" style="font-size:0.85rem;color:var(--slate);">Asked by ' + escapeHtml(item.member) + ' \u00b7 ' + escapeHtml(item.portfolio) + '</p>' +
       '<p class="body-text">' + escapeHtml(item.question) + '</p>' +
       answerHtml +
-      '<p><a class="cite" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">View on parliament.wa.gov.au</a></p>' +
+      linkHtml +
     '</div>'
   );
 }

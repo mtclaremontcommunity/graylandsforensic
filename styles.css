@@ -114,8 +114,9 @@ nav.links a.nav-register:hover { background: var(--brick-tint); border-bottom-co
 /* ---------- Evidence nav dropdown: desktop flyout, mobile inline accordion ---------- */
 .nav-dropdown { position: relative; }
 .nav-dropdown-toggle {
-  background: none; border: none; font: inherit; color: var(--ink); cursor: pointer;
-  display: inline-flex; align-items: center; gap: 4px; padding: 8px 4px;
+  background: none; border: none; color: var(--ink); cursor: pointer;
+  font-family: inherit; font-size: 0.92rem; font-weight: 500;
+  display: inline-flex; align-items: center; gap: 4px; padding: 8px 12px;
 }
 .nav-dropdown-toggle::after { content: '▾'; font-size: 0.65em; opacity: 0.65; position: relative; top: 1px; }
 .nav-dropdown.open .nav-dropdown-toggle::after { content: '▴'; }
@@ -408,6 +409,27 @@ footer a { color: var(--slate); }
 table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 0.94rem; }
 th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--hairline); vertical-align: top; }
 th { font-family: 'IBM Plex Mono', monospace; font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--slate); font-weight: 500; }
+
+/* ---------- Log table (safety-record.html) ---------- */
+table.log-table { font-size: 0.92rem; }
+table.log-table th { background: var(--ink); color: #fff; padding: 12px; }
+table.log-table td.log-date { font-family: 'IBM Plex Mono', monospace; font-size: 0.82rem; color: var(--brick); font-weight: 600; white-space: nowrap; }
+table.log-table td.log-source { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--slate); white-space: nowrap; }
+table.log-table tbody tr:nth-child(odd) { background: var(--panel); }
+table.log-table tbody tr:hover { background: var(--brick-tint); }
+table.log-table td.log-what strong.risk { color: var(--brick); }
+
+/* ---------- Facility comparison stat tables ---------- */
+table.stat-table td, table.stat-table th { padding: 8px 12px; }
+table.stat-table tr.highlight td { background: var(--brick-tint); font-weight: 600; }
+table.stat-table tr.highlight td:first-child { border-left: 3px solid var(--brick); }
+.stat-note { font-size: 0.88rem; color: var(--slate); margin: 10px 0 22px; }
+.stat-note strong { color: var(--ink); }
+
+/* ---------- Comparator cards ---------- */
+.comparator-card { background: var(--panel); border: 1px solid var(--hairline); border-radius: 10px; padding: 24px 26px; margin-bottom: 18px; }
+.comparator-card h3 { margin-top: 0; }
+.comparator-flag { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #7a3625; background: var(--brick-tint); border-radius: 4px; padding: 2px 8px; margin-bottom: 10px; }
 
 .callout { background: var(--brick-tint); border-left: 3px solid var(--brick); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; font-size: 0.95rem; }
 .callout p:last-child { margin-bottom: 0; }

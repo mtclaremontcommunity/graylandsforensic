@@ -1,5 +1,13 @@
 [
   {
+    "date": "2026-08-19",
+    "tag": "milestone",
+    "title": "New page: the Graylands Log",
+    "body": "Graylands doesn't publish a public incident record, so we built one. The Graylands Log brings together every safety or security incident connected to the site that we've been able to source and verify — government records, coronial findings, and mainstream media — in one chronological table instead of scattered across a 38-page paper. It includes a 2023 Question on Notice in which the government's only response, fourteen months after the event, was to dispute the word “escape” without saying what did happen. The same page pulls the interstate and WA comparators — Thomas Embling Hospital, Cumberland Hospital, and Bennett Brook Disability Justice Centre — out of the research paper's annex and up to full visibility, since they're the evidence for why an undisclosed safety and notification plan is a real risk, not a hypothetical one.",
+    "link": "safety-record.html",
+    "linkText": "Read the Graylands Log"
+  },
+  {
     "date": "2026-08-17",
     "tag": "milestone",
     "title": "Questions on Notice tracker launched",
