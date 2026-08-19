@@ -7,11 +7,57 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  initNavDropdowns();
   loadUpdates();
   loadQons();
   injectMobilePetitionBar();
   openConcernFromHash();
 });
+
+/* Evidence nav dropdown — click/tap to toggle (not hover-only, so it works on
+   touch); closes when another dropdown opens, an outside click happens, or Escape
+   is pressed. No-op on any page that doesn't have a .nav-dropdown yet. */
+function initNavDropdowns() {
+  var dropdowns = document.querySelectorAll('.nav-dropdown');
+  if (!dropdowns.length) return;
+
+  dropdowns.forEach(function (dropdown) {
+    var toggle = dropdown.querySelector('.nav-dropdown-toggle');
+    if (!toggle) return;
+    toggle.setAttribute('aria-haspopup', 'true');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      var wasOpen = dropdown.classList.contains('open');
+      dropdowns.forEach(function (d) {
+        d.classList.remove('open');
+        var t = d.querySelector('.nav-dropdown-toggle');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+      if (!wasOpen) {
+        dropdown.classList.add('open');
+        toggle.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  document.addEventListener('click', function () {
+    dropdowns.forEach(function (d) {
+      d.classList.remove('open');
+      var t = d.querySelector('.nav-dropdown-toggle');
+      if (t) t.setAttribute('aria-expanded', 'false');
+    });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      dropdowns.forEach(function (d) {
+        d.classList.remove('open');
+        var t = d.querySelector('.nav-dropdown-toggle');
+        if (t) t.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+}
 
 var PETITION_URL = 'https://www.change.org/p/graylands-forensic-campus-expansion';
 
