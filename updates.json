@@ -1,27 +1,11 @@
 [
   {
-    "date": "2026-08-20",
-    "tag": "milestone",
-    "title": "Site restructured around the safety case",
-    "body": "The site now leads with community safety instead of listing it sixth. The Safety Record page has been rebuilt with direct links to source evidence, and the eight documented concerns are reordered to match.",
-    "link": "safety-record.html",
-    "linkText": "Read the rebuilt case"
-  },
-  {
-    "date": "2026-08-20",
-    "tag": "milestone",
-    "title": "Safety page rewritten: comparators moved up, Cumberland Hospital update added",
-    "body": "The safety page has been restructured, not just extended. Comparators now sit directly after the five risk factors rather than buried at the bottom — including today's news that Cumberland Hospital in Sydney has recorded at least 14 more absconding incidents since February, despite the government review ordered after two escapes were linked to three deaths. The pattern across every comparator is the same: an incident, a promised review, and a review that hasn't fixed it. That's the case for a published assessment before construction here, not after an incident forces one.",
-    "link": "safety-record.html",
-    "linkText": "Read the updated case"
-  },
-  {
     "date": "2026-08-19",
     "tag": "milestone",
-    "title": "Safety page rebuilt around five concerns, not just a log",
-    "body": "The Safety Record page now leads with the argument, not the evidence table. Five concerns are stated up front — absconding frequency, transitions between security levels, release and diagnostic error, compliance-dependent leave, and what the CLMI Act's legislated push toward community access actually requires — each linked directly to the log entries and official statistics that support it. A new page explains what the CLMI Act changed in practical terms, including the 'unplanned discharges' consequence of retrospective limiting terms. The research paper has been updated to match.",
+    "title": "Safety Risks page added to study the risks posed. Grayland incident log built from evidence.",
+    "body": "The Safety Risks page looks into how facilities like the proposed Graylands expansion are run and what risks they can pose to the surrounding community. This is based on available data of incidents, comparable facilities and statistics that have been published. Five concerns are stated up front — absconding frequency, transitions between security levels, release and diagnostic error, compliance-dependent leave, and what the CLMI Act's legislated push toward community access actually requires — each linked directly to the log entries and official statistics that support it.",
     "link": "safety-record.html",
-    "linkText": "Read the case"
+    "linkText": "Understand the risks"
   },
   {
     "date": "2026-08-19",
@@ -31,14 +15,7 @@
     "link": "downloads.html",
     "linkText": "Download the updated research paper"
   },
-  {
-    "date": "2026-08-19",
-    "tag": "milestone",
-    "title": "New page: the Graylands Log",
-    "body": "Graylands doesn't publish a public incident record, so we built one — every safety or security incident we could source and verify, government records, coronial findings, and media, in one chronological log. It includes a 2023 Question on Notice in which the government's only response, fourteen months after the event, was to dispute the word “escape” without saying what did happen. The same page carries the WA and interstate comparators — Thomas Embling Hospital, Cumberland Hospital, and Bennett Brook Disability Justice Centre — plus official absconding, assault, and offence-profile statistics.",
-    "link": "safety-record.html",
-    "linkText": "Read the Graylands Log"
-  },
+
   {
     "date": "2026-08-17",
     "tag": "milestone",
