@@ -419,6 +419,13 @@ table.log-table tbody tr:nth-child(odd) { background: var(--panel); }
 table.log-table tbody tr:hover { background: var(--brick-tint); }
 table.log-table td.log-what strong.risk { color: var(--brick); }
 
+/* ---------- Safety-page concern cards ---------- */
+.concern-block { background: var(--panel); border: 1px solid var(--hairline); border-left: 4px solid var(--brick); border-radius: 10px; padding: 24px 26px; margin-bottom: 20px; }
+.concern-block h3 { margin: 0 0 10px; font-size: 1.15rem; }
+.concern-block .evidence-links { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--hairline); font-size: 0.88rem; }
+.concern-block .evidence-links a { margin-right: 16px; }
+.concern-num { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--brick); font-weight: 600; margin-bottom: 6px; }
+
 /* ---------- Facility comparison stat tables ---------- */
 table.stat-table td, table.stat-table th { padding: 8px 12px; }
 table.stat-table tr.highlight td { background: var(--brick-tint); font-weight: 600; }
