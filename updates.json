@@ -2,6 +2,14 @@
   {
     "date": "2026-08-20",
     "tag": "milestone",
+    "title": "Site rebuilt around the safety case, not the governance concerns",
+    "body": "The whole site has been restructured to lead with community safety, matching the research paper's own updated structure. The Safety Record page now links every claim directly to the specific log row that proves it, splits each entry into what happened and why it matters, and adds the full mechanism behind several cases that were previously only summarised. Bennett Brook Disability Justice Centre — WA's closest precedent — is now presented accurately: government acted only after a third escape, and the facility remains officially under-utilised nine years later. The eight documented concerns are now ordered to match the paper, with safety leading rather than sitting sixth. A dead petition link that had been live across every page on the site has also been corrected.",
+    "link": "safety-record.html",
+    "linkText": "Read the rebuilt case"
+  },
+  {
+    "date": "2026-08-20",
+    "tag": "milestone",
     "title": "Safety page rewritten: comparators moved up, Cumberland Hospital update added",
     "body": "The safety page has been restructured, not just extended. Comparators now sit directly after the five risk factors rather than buried at the bottom — including today's news that Cumberland Hospital in Sydney has recorded at least 14 more absconding incidents since February, despite the government review ordered after two escapes were linked to three deaths. The pattern across every comparator is the same: an incident, a promised review, and a review that hasn't fixed it. That's the case for a published assessment before construction here, not after an incident forces one.",
     "link": "safety-record.html",

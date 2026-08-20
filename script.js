@@ -59,7 +59,7 @@ function initNavDropdowns() {
   });
 }
 
-var PETITION_URL = 'https://www.change.org/p/graylands-forensic-campus-expansion';
+var PETITION_URL = 'https://www.change.org/p/pause-the-698m-graylands-forensic-campus-expansion-show-us-why-this-makes-sense';
 
 /* Small always-visible mobile CTA — the header nav-petition button is hidden
    inside the hamburger menu on small screens, and most petition traffic

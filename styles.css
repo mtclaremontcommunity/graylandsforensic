@@ -415,13 +415,23 @@ table.log-table { font-size: 0.92rem; }
 table.log-table th { background: var(--ink); color: #fff; padding: 12px; }
 table.log-table td.log-date { font-family: 'IBM Plex Mono', monospace; font-size: 0.82rem; color: var(--brick); font-weight: 600; white-space: nowrap; }
 table.log-table td.log-source { font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--slate); white-space: nowrap; }
+table.log-table td.log-implication { font-size: 0.86rem; color: var(--ink); background: var(--brick-tint); border-left: 2px solid var(--brick); }
+table.log-table td.log-implication .risk-tag { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; font-weight: 700; color: var(--brick); text-transform: uppercase; margin-bottom: 4px; letter-spacing: 0.02em; }
 table.log-table tbody tr:nth-child(odd) { background: var(--panel); }
+table.log-table tbody tr:nth-child(odd) td.log-implication { background: #f3e4de; }
 table.log-table tbody tr:hover { background: var(--brick-tint); }
+table.log-table tbody tr:target { outline: 3px solid var(--brick); outline-offset: -3px; animation: rowflash 2s ease-out; }
+@keyframes rowflash { from { background: #fff3cd; } to { background: transparent; } }
 table.log-table td.log-what strong.risk { color: var(--brick); }
 
 /* ---------- Safety-page concern cards ---------- */
 .concern-block { background: var(--panel); border: 1px solid var(--hairline); border-left: 4px solid var(--brick); border-radius: 10px; padding: 24px 26px; margin-bottom: 20px; }
 .concern-block h3 { margin: 0 0 10px; font-size: 1.15rem; }
+.concern-block .risk-label { display: block; font-family: 'IBM Plex Mono', monospace; font-size: 0.72rem; font-weight: 700; color: var(--brick); text-transform: uppercase; letter-spacing: 0.03em; margin: 14px 0 4px; }
+.concern-block .risk-label:first-of-type { margin-top: 10px; }
+.concern-block p.risk-body { margin: 0 0 8px; }
+.concern-block .example-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: 4px; }
+.concern-block .example-links a { font-size: 0.86rem; }
 .concern-block .evidence-links { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--hairline); font-size: 0.88rem; }
 .concern-block .evidence-links a { margin-right: 16px; }
 .concern-num { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 0.78rem; color: var(--brick); font-weight: 600; margin-bottom: 6px; }
@@ -437,6 +447,8 @@ table.stat-table tr.highlight td:first-child { border-left: 3px solid var(--bric
 .comparator-card { background: var(--panel); border: 1px solid var(--hairline); border-radius: 10px; padding: 24px 26px; margin-bottom: 18px; }
 .comparator-card h3 { margin-top: 0; }
 .comparator-flag { display: inline-block; font-family: 'IBM Plex Mono', monospace; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: #7a3625; background: var(--brick-tint); border-radius: 4px; padding: 2px 8px; margin-bottom: 10px; }
+.comparator-sources { margin-top: 14px; padding-top: 10px; border-top: 1px solid var(--hairline); font-size: 0.8rem; color: var(--slate); }
+.comparator-sources a { margin-right: 14px; white-space: nowrap; }
 
 .callout { background: var(--brick-tint); border-left: 3px solid var(--brick); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 20px 0; font-size: 0.95rem; }
 .callout p:last-child { margin-bottom: 0; }
