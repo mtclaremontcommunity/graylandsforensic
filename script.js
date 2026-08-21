@@ -65,6 +65,7 @@ var PETITION_URL = 'https://www.change.org/p/pause-the-698m-graylands-forensic-c
    inside the hamburger menu on small screens, and most petition traffic
    arrives on mobile (WhatsApp), so it needs its own persistent entry point. */
 function injectMobilePetitionBar() {
+  if (document.body.hasAttribute('data-no-petition-bar')) return;
   if (document.querySelector('.mobile-petition-bar')) return;
   var bar = document.createElement('div');
   bar.className = 'mobile-petition-bar';
