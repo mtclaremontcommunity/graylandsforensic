@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
   injectMobilePetitionBar();
   openConcernFromHash();
   initFooterCommentBox();
+  initPetitionClickTracking();
 });
 
 /* Evidence nav dropdown — click/tap to toggle (not hover-only, so it works on
@@ -259,5 +260,24 @@ function initFooterCommentBox() {
       textarea.value = '';
       button.disabled = false;
     }, 500);
+  });
+}
+
+/* ---------- Track clicks through to the Change.org petition ----------
+   Fires a named GA4 event whenever any link pointing to change.org is
+   clicked, anywhere on the page (nav button, action cards, petition
+   strips) — so it shows up as its own countable event in GA4 instead of
+   being mixed in with every other outbound-click on the site. Works on
+   any future change.org link added too, with no extra wiring needed. */
+function initPetitionClickTracking() {
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('a[href*="change.org"]');
+    if (!link) return;
+    if (typeof gtag === 'function') {
+      gtag('event', 'petition_click', {
+        link_url: link.href,
+        link_text: link.textContent.trim()
+      });
+    }
   });
 }
