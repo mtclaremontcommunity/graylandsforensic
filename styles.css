@@ -114,7 +114,7 @@ nav.links a.nav-register:hover { background: var(--brick-tint); border-bottom-co
 /* ---------- Evidence nav dropdown: desktop flyout, mobile inline accordion ---------- */
 .nav-dropdown { position: relative; }
 .nav-dropdown-toggle {
-  background: none; border: none; color: var(--ink); cursor: pointer;
+  background: none; border: none; border-bottom: 2px solid transparent; color: var(--ink); cursor: pointer;
   font-family: inherit; font-size: 0.92rem; font-weight: 500;
   display: inline-flex; align-items: center; gap: 4px; padding: 8px 12px;
 }
@@ -510,3 +510,23 @@ table.stat-table tr.highlight td:first-child { border-left: 3px solid var(--bric
 }
 .update-preview-head h2 { margin-bottom: 0; }
 .update-preview-more-inline { font-size: 0.92rem; white-space: nowrap; }
+
+/* ---------- Footer comment box: posts straight to Google Forms, no embedded UI ---------- */
+.footer-note { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--hairline); }
+.footer-note > span { display: block; font-size: 0.85rem; color: var(--slate); margin-bottom: 8px; }
+.footer-note-form { max-width: 480px; }
+.footer-note-row { display: flex; gap: 8px; align-items: flex-start; }
+.footer-note-row textarea {
+  flex: 1; min-height: 40px; max-height: 140px; padding: 8px 10px;
+  border: 1px solid var(--hairline); border-radius: 6px; background: var(--panel);
+  font-family: inherit; font-size: 0.88rem; color: var(--ink); resize: vertical;
+}
+.footer-note-row textarea:focus { outline: none; border-color: var(--brick); }
+.footer-note-row button {
+  flex-shrink: 0; padding: 0 16px; height: 38px; border: none; border-radius: 6px;
+  background: var(--brick); color: #fff; font-weight: 600; font-size: 0.86rem; cursor: pointer;
+}
+.footer-note-row button:hover { background: #833a28; }
+.footer-note-row button:disabled { opacity: 0.6; cursor: default; }
+.footer-note-status { display: block; font-size: 0.8rem; color: var(--verified); margin-top: 6px; min-height: 1.2em; }
+.footer-note-hidden-frame { display: none; }

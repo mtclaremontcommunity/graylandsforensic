@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   loadQons();
   injectMobilePetitionBar();
   openConcernFromHash();
+  initFooterCommentBox();
 });
 
 /* Evidence nav dropdown — click/tap to toggle (not hover-only, so it works on
@@ -241,4 +242,36 @@ function escapeHtml(str) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
+}
+
+/* ---------- Footer comment box ----------
+   Posts straight to the Google Form's response endpoint via a hidden iframe
+   target, so no Google UI (sign-in banner, branding) ever shows on the page.
+   The hidden iframe fires a 'load' event on its own initial blank load too,
+   so a flag tracks whether a real submission is in flight before reacting. */
+function initFooterCommentBox() {
+  var form = document.querySelector('[data-comment-form]');
+  if (!form) return;
+  var frame = document.querySelector('iframe.footer-note-hidden-frame');
+  var status = form.querySelector('.footer-note-status');
+  var textarea = form.querySelector('textarea');
+  var button = form.querySelector('button');
+  var submitted = false;
+
+  form.addEventListener('submit', function () {
+    submitted = true;
+    button.disabled = true;
+    button.textContent = 'Sending…';
+  });
+
+  if (frame) {
+    frame.addEventListener('load', function () {
+      if (!submitted) return;
+      status.textContent = 'Sent — thank you.';
+      textarea.value = '';
+      button.disabled = false;
+      button.textContent = 'Send';
+      submitted = false;
+    });
+  }
 }
