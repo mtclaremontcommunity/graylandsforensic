@@ -512,7 +512,7 @@ table.stat-table tr.highlight td:first-child { border-left: 3px solid var(--bric
 .update-preview-more-inline { font-size: 0.92rem; white-space: nowrap; }
 
 /* ---------- Footer comment box: posts straight to Google Forms, no embedded UI ---------- */
-.footer-note { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--hairline); }
+.footer-note { margin-bottom: 22px; }
 .footer-note > span { display: block; font-size: 0.85rem; font-weight: 600; color: var(--slate); margin-bottom: 8px; }
 .footer-note-form { max-width: 480px; }
 .footer-note-form textarea {
