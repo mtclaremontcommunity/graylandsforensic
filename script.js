@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
   injectMobilePetitionBar();
   openConcernFromHash();
   initFooterCommentBox();
+  initUpdatesSignup();
+  initStoryForm();
   initPetitionClickTracking();
 });
 
@@ -245,21 +247,91 @@ function escapeHtml(str) {
     .replace(/"/g, '&quot;');
 }
 
-/* ---------- Footer comment box ----------
-   Posts straight to the Google Form's response endpoint via a hidden iframe
-   target, so no Google UI (sign-in banner, branding) ever shows on the page. */
+/* ---------- Google Form submission helper ----------
+   Posts a single field straight to a Google Form's response endpoint with
+   fetch() (mode: 'no-cors'), so no page navigation and no Google UI ever
+   shows. Used by all three site forms below — comment box, updates signup,
+   and the story form on the Take Action page. */
+var COMMENTS_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLScJzjeulUitbGopCawGFH9y2OItcb9kPHFB2JQq2C8-3jFjYA/formResponse';
+var COMMENTS_ENTRY = 'entry.608877443';
+var UPDATES_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdTwQhTb4ot1SNBfApMqbpkIsYp-J97KjXRXjnhzpuM9k3DEw/formResponse';
+var UPDATES_ENTRY = 'entry.608877443';
+
+function submitToGoogleForm(url, entryName, value) {
+  var body = new URLSearchParams();
+  body.append(entryName, value);
+  return fetch(url, {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: body.toString()
+  });
+}
+
+/* ---------- Footer comment box (generic, on every page except Take Action) ---------- */
 function initFooterCommentBox() {
   var form = document.querySelector('[data-comment-form]');
   if (!form) return;
   var textarea = form.querySelector('textarea');
   var button = form.querySelector('button');
 
-  form.addEventListener('submit', function () {
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!textarea.value.trim()) return;
     button.disabled = true;
-    setTimeout(function () {
+    submitToGoogleForm(COMMENTS_FORM_URL, COMMENTS_ENTRY, textarea.value).finally(function () {
       textarea.value = '';
       button.disabled = false;
-    }, 500);
+    });
+  });
+}
+
+/* ---------- Register-for-updates box (email only, on every page) ---------- */
+function initUpdatesSignup() {
+  var form = document.querySelector('[data-updates-form]');
+  if (!form) return;
+  var input = form.querySelector('input[type="email"]');
+  var button = form.querySelector('button');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!input.value.trim()) return;
+    button.disabled = true;
+    submitToGoogleForm(UPDATES_FORM_URL, UPDATES_ENTRY, input.value).finally(function () {
+      input.value = '';
+      button.disabled = false;
+      button.textContent = 'Signed up';
+      setTimeout(function () { button.textContent = 'Sign up'; }, 2500);
+    });
+  });
+}
+
+/* ---------- Share-your-story box (Take Action page only) ----------
+   The story always goes to the comments form. The email, if given, goes
+   separately to the updates form — both are optional-in-combination, so
+   the email submission only fires when something was actually entered. */
+function initStoryForm() {
+  var form = document.querySelector('[data-story-form]');
+  if (!form) return;
+  var textarea = form.querySelector('textarea');
+  var email = form.querySelector('input[type="email"]');
+  var button = form.querySelector('button');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!textarea.value.trim()) return;
+    button.disabled = true;
+    var tasks = [submitToGoogleForm(COMMENTS_FORM_URL, COMMENTS_ENTRY, textarea.value)];
+    if (email.value.trim()) {
+      tasks.push(submitToGoogleForm(UPDATES_FORM_URL, UPDATES_ENTRY, email.value));
+    }
+    Promise.all(tasks).finally(function () {
+      textarea.value = '';
+      email.value = '';
+      button.disabled = false;
+      button.textContent = 'Sent';
+      setTimeout(function () { button.textContent = 'Send'; }, 2500);
+    });
   });
 }
 
