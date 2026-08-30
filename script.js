@@ -307,9 +307,10 @@ function initUpdatesSignup() {
 }
 
 /* ---------- Share-your-story box (Take Action page only) ----------
-   The story always goes to the comments form. The email, if given, goes
-   separately to the updates form — both are optional-in-combination, so
-   the email submission only fires when something was actually entered. */
+   Both the story and the optional email go into the SAME entry on the
+   comments form, so they land in one row together and stay linked —
+   sending the email to the separate updates form would put it in an
+   unconnected sheet with no way to match it back to the story. */
 function initStoryForm() {
   var form = document.querySelector('[data-story-form]');
   if (!form) return;
@@ -321,11 +322,11 @@ function initStoryForm() {
     e.preventDefault();
     if (!textarea.value.trim()) return;
     button.disabled = true;
-    var tasks = [submitToGoogleForm(COMMENTS_FORM_URL, COMMENTS_ENTRY, textarea.value)];
+    var combined = textarea.value.trim();
     if (email.value.trim()) {
-      tasks.push(submitToGoogleForm(UPDATES_FORM_URL, UPDATES_ENTRY, email.value));
+      combined += '\n\nContact email: ' + email.value.trim();
     }
-    Promise.all(tasks).finally(function () {
+    submitToGoogleForm(COMMENTS_FORM_URL, COMMENTS_ENTRY, combined).finally(function () {
       textarea.value = '';
       email.value = '';
       button.disabled = false;
