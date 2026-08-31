@@ -1,0 +1,39 @@
+<svg viewBox="0 0 1560 991" xmlns="http://www.w3.org/2000/svg" font-family="'IBM Plex Sans', -apple-system, sans-serif" role="img" aria-labelledby="ttTitle ttDesc">
+  <title id="ttTitle">The Graylands transformation</title>
+  <desc id="ttDesc">Timeline showing Graylands changing from a general hospital with no purpose-built secure unit (1909-1993) to a mixed general and secure facility (1993-2026, 109-118 general beds plus 45 forensic) to the government's full long-term plan, assessed by Infrastructure WA (136 forensic plus 40 secure rehabilitation beds, 176 total, zero general beds; only the first stage is funded so far).</desc>
+
+  <rect x="0" y="0" width="1560" height="991" fill="#0c0c0e"/>
+
+  <text x="56" y="66" font-size="24" font-weight="700" letter-spacing="2" fill="#f7b51b">THE GRAYLANDS TRANSFORMATION</text>
+
+  <text x="54" y="145" font-size="54" font-weight="800" fill="#f6f6f7">IT WAS A GENERAL HOSPITAL.</text>
+  <text x="54" y="218" font-size="54" font-weight="800" fill="#d82c2c">IT'S BECOMING A FORENSIC CAMPUS.</text>
+
+  <text x="56" y="270" font-size="22" fill="#b8b9bd">Three separate signals said this needed a second look — the site, the law, and the evidence.</text>
+  <text x="56" y="300" font-size="22" fill="#b8b9bd">None were ever reconciled with each other, and the body that could have done it no longer exists.</text>
+
+  <line x1="56" y1="340" x2="1504" y2="340" stroke="#2a2a2e" stroke-width="1.5"/>
+
+  <!-- Row 1: 1909-1993 -->
+  <text x="56" y="400" font-size="27" font-weight="700" fill="#f6f6f7">1909–1993 · GENERAL HOSPITAL</text>
+  <rect x="56" y="425" width="800" height="56" rx="10" fill="#388eeb"/>
+  <text x="56" y="516" font-size="21" fill="#9a9aa2">No purpose-built secure unit.</text>
+
+  <!-- Row 2: 1993-2026 -->
+  <text x="56" y="576" font-size="27" font-weight="700" fill="#f6f6f7">1993–2026 · GENERAL + SECURE WING</text>
+  <rect x="56" y="601" width="800" height="56" rx="10" fill="#388eeb"/>
+  <rect x="796" y="601" width="60" height="56" rx="10" fill="#d82c2c"/>
+  <rect x="796" y="601" width="30" height="56" fill="#388eeb"/>
+  <text x="56" y="692" font-size="21" fill="#9a9aa2">109–118 general beds · 45 forensic (Frankland + Dryandra)</text>
+
+  <!-- Row 3: 2026 onwards -->
+  <text x="56" y="752" font-size="27" font-weight="700" fill="#d82c2c">THE FULL PLAN · FULLY SECURE FORENSIC CAMPUS</text>
+  <rect x="56" y="777" width="860" height="56" rx="10" fill="#d82c2c"/>
+  <text x="56" y="868" font-size="21" fill="#9a9aa2">0 general · 136 forensic + 40 secure rehab = 176 beds. Only Stage 1 funded so far.</text>
+
+  <!-- Legend -->
+  <rect x="56" y="915" width="24" height="24" rx="4" fill="#388eeb"/>
+  <text x="90" y="933" font-size="20" fill="#d5d5d8">General psychiatric</text>
+  <rect x="290" y="915" width="24" height="24" rx="4" fill="#d82c2c"/>
+  <text x="324" y="933" font-size="20" fill="#d5d5d8">Forensic / secure</text>
+</svg>
