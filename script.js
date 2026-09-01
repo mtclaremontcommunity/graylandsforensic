@@ -74,9 +74,6 @@ function injectMobilePetitionBar() {
   var bar = document.createElement('div');
   bar.className = 'mobile-petition-bar';
   bar.innerHTML = '<a class="mpb-primary" href="' + PETITION_URL + '" target="_blank" rel="noopener">Sign the petition</a>';
-  if (!document.body.hasAttribute('data-no-register-cta')) {
-    bar.innerHTML += '<a class="mpb-register" href="join-us.html#register">+ Register support</a>';
-  }
   document.body.appendChild(bar);
 }
 
