@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initStoryForm();
   initPetitionClickTracking();
   initImageLightbox();
+  initUpdatesBadge();
 });
 
 /* Evidence nav dropdown — click/tap to toggle (not hover-only, so it works on
@@ -406,4 +407,41 @@ function initImageLightbox() {
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') closeLightbox();
   });
+}
+
+/* Small dot on the "Updates" nav link when there's an entry newer than the
+   last one this visitor has seen. Stored in localStorage as a plain date
+   string; cleared automatically when the visitor actually opens updates.html.
+   Fails silently (no badge) if updates.json can't be loaded - never blocks
+   the rest of the page. */
+function initUpdatesBadge() {
+  var link = document.querySelector('nav.links a[href="updates.html"]');
+  if (!link) return;
+  var dot = link.querySelector('.nav-badge-dot');
+  if (!dot) return;
+
+  var onUpdatesPage = /(^|\/)updates\.html$/.test(location.pathname);
+  var STORAGE_KEY = 'mccn_last_seen_update';
+
+  fetch('updates.json')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (!data || !data.length) return;
+      var latest = data.reduce(function (max, item) {
+        return item.date > max ? item.date : max;
+      }, data[0].date);
+
+      if (onUpdatesPage) {
+        try { localStorage.setItem(STORAGE_KEY, latest); } catch (e) {}
+        dot.classList.remove('show');
+        return;
+      }
+
+      var seen;
+      try { seen = localStorage.getItem(STORAGE_KEY); } catch (e) { seen = null; }
+      if (!seen || latest > seen) {
+        dot.classList.add('show');
+      }
+    })
+    .catch(function () { /* no badge if this fails - not worth surfacing an error for */ });
 }

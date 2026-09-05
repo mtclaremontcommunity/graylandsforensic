@@ -41,11 +41,16 @@
     <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
     <nav class="links">
       <a href="index.html">Home</a>
-      <a href="the-issue.html">The issue</a>
-      <a href="the-site.html">The site</a>
-      <a href="concerns.html">Concerns</a>
-      <a href="safety-record.html">Safety risks</a>
-      <a href="updates.html">Updates</a>
+      <a href="updates.html">Updates<span class="nav-badge-dot" aria-hidden="true"></span></a>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-dropdown-toggle">The issue</button>
+        <div class="nav-dropdown-menu">
+          <a href="the-issue.html">The issue</a>
+          <a href="the-site.html">The site</a>
+          <a href="concerns.html">Concerns</a>
+          <a href="safety-record.html">Safety risks</a>
+        </div>
+      </div>
       <a href="faq.html" class="active">FAQ</a>
       <div class="nav-dropdown">
         <button type="button" class="nav-dropdown-toggle">Evidence</button>
@@ -202,6 +207,6 @@
     </div>
 </div>
 </footer>
-<script src="script.js?v=3"></script>
+<script src="script.js?v=4"></script>
 </body>
 </html>
