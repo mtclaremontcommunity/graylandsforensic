@@ -1,5 +1,29 @@
 [
   {
+    "date": "2026-09-05",
+    "tag": "milestone",
+    "title": "New: the odour buffer question",
+    "body": "A new page sets out a statutory planning restriction we haven't discussed before — the City of Nedlands' own scheme says no sensitive land use, hospitals included, is to be located in the Subiaco Wastewater Treatment Plant odour buffer that Infrastructure WA says this site falls within. We've checked the government's own referral documents and correspondence directly, and set out exactly what's confirmed, what's missing, and what we've asked to see.",
+    "link": "the-buffer.html",
+    "linkText": "Read the odour buffer page"
+  },
+  {
+    "date": "2026-09-05",
+    "tag": "milestone",
+    "title": "New: The Site — plans, drawings and the published timeline, all in one place",
+    "body": "A new page collects the actual architectural plans for the expansion, the government's own masterplan diagram, and the published procurement and construction timeline — including the newest Managing Contractor tender documents and what's now visibly under way on the ground. It will grow as more plans and evidence become available.",
+    "link": "the-site.html",
+    "linkText": "See the plans and the timeline"
+  },
+  {
+    "date": "2026-09-03",
+    "tag": "milestone",
+    "title": "Work has started: crews on site at the John XXIII Avenue boundary",
+    "body": "On 3 September, a resident stopped to speak with a work crew carrying out electrical infrastructure work at the John XXIII Avenue boundary of the Graylands site. Asked what it was for, the crew confirmed it was for the proposed development — the first physical sign of site works most residents have seen with their own eyes. If you spot similar activity, tell us at mtclaremontcommunity@gmail.com — we're keeping a public record of what's actually happening on the ground.",
+    "link": "the-site.html#on-the-ground",
+    "linkText": "See it on the timeline"
+  },
+  {
     "date": "2026-08-31",
     "tag": "media",
     "title": "Responding to a letter in the Post",
@@ -11,7 +35,7 @@
     "date": "2026-08-26",
     "tag": "milestone",
     "title": "First Freedom of Information application filed",
-    "body": "The first of our eight planned FOI applications \u2014 the site selection and due diligence request to the Department of Health \u2014 has been lodged (FOI 2026-55). The outcome will be published in full once the statutory 45-day period runs. We've also added a Funding page setting out how this, and future costs, are being paid for.",
+    "body": "The first of our eight planned FOI applications — the site selection and due diligence request to the Department of Health — has been lodged (FOI 2026-55). The outcome will be published in full once the statutory 45-day period runs. We've also added a Funding page setting out how this, and future costs, are being paid for.",
     "link": "foi.html",
     "linkText": "Read about the FOI programme"
   },
@@ -39,7 +63,6 @@
     "link": "downloads.html",
     "linkText": "Download the updated research paper"
   },
-
   {
     "date": "2026-08-17",
     "tag": "milestone",
