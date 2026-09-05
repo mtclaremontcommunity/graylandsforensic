@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
   initUpdatesSignup();
   initStoryForm();
   initPetitionClickTracking();
+  initImageLightbox();
 });
 
 /* Evidence nav dropdown — click/tap to toggle (not hover-only, so it works on
@@ -350,5 +351,59 @@ function initPetitionClickTracking() {
         link_text: link.textContent.trim()
       });
     }
+  });
+}
+
+/* Click-to-zoom lightbox for plan/diagram images. Any <img class="zoomable">
+   gets a small "view full size" hint and opens its data-full (or src) image
+   in a full-screen overlay so detailed drawings can be read at native
+   resolution without making the inline page layout unwieldy. */
+function initImageLightbox() {
+  var images = document.querySelectorAll('img.zoomable');
+  if (!images.length) return;
+
+  var overlay = document.createElement('div');
+  overlay.className = 'lightbox-overlay';
+  overlay.innerHTML =
+    '<button class="lightbox-close" aria-label="Close">&times;</button>' +
+    '<img alt="">' +
+    '<div class="lightbox-caption"></div>';
+  document.body.appendChild(overlay);
+  var overlayImg = overlay.querySelector('img');
+  var overlayCaption = overlay.querySelector('.lightbox-caption');
+
+  function openLightbox(src, alt) {
+    overlayImg.src = src;
+    overlayImg.alt = alt || '';
+    overlayCaption.textContent = 'Click anywhere, or press Esc, to close';
+    overlay.classList.add('open');
+  }
+  function closeLightbox() {
+    overlay.classList.remove('open');
+    overlayImg.src = '';
+  }
+
+  images.forEach(function (img) {
+    if (!img.closest('.plan-card, .hero-photo')) return;
+    var hint = document.createElement('span');
+    hint.className = 'zoom-hint';
+    hint.textContent = 'Tap to view full size';
+    var wrapper = img.parentElement;
+    if (getComputedStyle(wrapper).position === 'static') {
+      wrapper.style.position = 'relative';
+    }
+    wrapper.appendChild(hint);
+    img.addEventListener('click', function () {
+      openLightbox(img.getAttribute('data-full') || img.src, img.alt);
+    });
+  });
+
+  overlay.addEventListener('click', closeLightbox);
+  overlay.querySelector('.lightbox-close').addEventListener('click', function (e) {
+    e.stopPropagation();
+    closeLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeLightbox();
   });
 }
