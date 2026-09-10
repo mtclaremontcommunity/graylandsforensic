@@ -518,6 +518,7 @@ table.stat-table tr.highlight td:first-child { border-left: 3px solid var(--bric
 .update-tag.tag-reply { background: var(--verified-tint); color: #2f5140; }
 .update-tag.tag-milestone { background: #e6eaf0; color: #2c3e50; }
 .update-tag.tag-media { background: #f0e9d8; color: #7a5c1e; }
+.update-tag.tag-campaign-update { background: var(--paper); color: var(--slate); }
 .update-entry h4 { margin: 4px 0 6px; font-size: 1.05rem; }
 .update-entry p { margin: 0; color: var(--slate); font-size: 0.95rem; }
 .update-entry p.body-text { color: var(--ink); }

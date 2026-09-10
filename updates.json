@@ -1,7 +1,23 @@
 [
   {
-    "date": "2026-09-07",
+    "date": "2026-09-10",
+    "tag": "campaign-update",
+    "title": "New: every government contract for this project, in one place",
+    "body": "Every contract for planning, design and early works on this project since October 2022 is now compiled from the government's own contract-disclosure register, with a saved copy of each record. One thing stood out enough to add to Concern 6: of every contract on that register, not one is for community, resident or school engagement.",
+    "link": "contracts.html",
+    "linkText": "See the contract register"
+  },
+  {
+    "date": "2026-09-10",
     "tag": "milestone",
+    "title": "OMID's own fact sheet now says what consultation it considers “required” — and residents aren't in it",
+    "body": "OMID's project fact sheet was reissued in September 2026 with a new question: “What consultation is required?” Its answer names only the clinical and design consultation mandatory under hospital-authorisation standards; public consultation is described as something that may occur incidentally through an unrelated planning process, and community engagement only as something that may happen once construction risks disrupting neighbours. That's now the government's own stated position on what this project owes the community — not an oversight this campaign can ask to be corrected.",
+    "link": "concerns.html#concern-6",
+    "linkText": "Read the full concern"
+  },
+  {
+    "date": "2026-09-07",
+    "tag": "campaign-update",
     "title": "Research paper updated: a Cabinet-approved plan we didn't know about",
     "body": "A government tender document revealed that an updated business case was approved and Cabinet approved a Project Definition Plan for this project in November 2025 — after the site was chosen, and after the law changed. The research paper has been rewritten around this finding, corrected on how it describes leave and reintegration under the Criminal Law (Mental Impairment) Act 2023, and tightened in several other places. Full detail in the paper.",
     "link": "downloads.html",
@@ -9,7 +25,7 @@
   },
   {
     "date": "2026-09-07",
-    "tag": "milestone",
+    "tag": "campaign-update",
     "title": "New: a dedicated page for journalists",
     "body": "A new Media page sets out this campaign's position in one place for reporters — what we are and aren't asking for, a sourced fact sheet, and a named contact — so coverage doesn't default to a 'residents vs a mental health facility' frame.",
     "link": "media.html",
@@ -17,7 +33,7 @@
   },
   {
     "date": "2026-09-05",
-    "tag": "milestone",
+    "tag": "campaign-update",
     "title": "New: the odour buffer question",
     "body": "A new page sets out a statutory planning restriction we haven't discussed before — the City of Nedlands' own scheme says no sensitive land use, hospitals included, is to be located in the Subiaco Wastewater Treatment Plant odour buffer that Infrastructure WA says this site falls within. We've checked the government's own referral documents and correspondence directly, and set out exactly what's confirmed, what's missing, and what we've asked to see.",
     "link": "the-buffer.html",
@@ -25,7 +41,7 @@
   },
   {
     "date": "2026-09-05",
-    "tag": "milestone",
+    "tag": "campaign-update",
     "title": "New: The Site — plans, drawings and the published timeline, all in one place",
     "body": "A new page collects the actual architectural plans for the expansion, the government's own masterplan diagram, and the published procurement and construction timeline — including the newest Managing Contractor tender documents and what's now visibly under way on the ground. It will grow as more plans and evidence become available.",
     "link": "the-site.html",
@@ -49,7 +65,7 @@
   },
   {
     "date": "2026-08-26",
-    "tag": "milestone",
+    "tag": "sent",
     "title": "First Freedom of Information application filed",
     "body": "The first of our eight planned FOI applications — the site selection and due diligence request to the Department of Health — has been lodged (FOI 2026-55). The outcome will be published in full once the statutory 45-day period runs. We've also added a Funding page setting out how this, and future costs, are being paid for.",
     "link": "foi.html",
@@ -65,7 +81,7 @@
   },
   {
     "date": "2026-08-19",
-    "tag": "milestone",
+    "tag": "campaign-update",
     "title": "Safety Risks page added to study the risks posed. Grayland incident log built from evidence.",
     "body": "The Safety Risks page looks into how facilities like the proposed Graylands expansion are run and what risks they can pose to the surrounding community. This is based on available data of incidents, comparable facilities and statistics that have been published. Five concerns are stated up front — absconding frequency, transitions between security levels, release and diagnostic error, compliance-dependent leave, and what the CLMI Act's legislated push toward community access actually requires — each linked directly to the log entries and official statistics that support it.",
     "link": "safety-record.html",
@@ -73,7 +89,7 @@
   },
   {
     "date": "2026-08-19",
-    "tag": "milestone",
+    "tag": "campaign-update",
     "title": "Research paper updated: full incident record and official statistics",
     "body": "The community research paper has been updated. Section 3 now carries the complete documented incident record for the site, and a new section sets out three official datasets — absconding by facility, assaults on nursing staff by facility, and the offence profile of people held under custody orders — each drawn from Parliamentary answers or statutory annual reports. The executive summary has been rewritten to state the question the paper actually asks: not whether Western Australia needs forensic mental health capacity, but whether anyone has established that this model is safe at this site.",
     "link": "downloads.html",
@@ -81,7 +97,7 @@
   },
   {
     "date": "2026-08-17",
-    "tag": "milestone",
+    "tag": "campaign-update",
     "title": "Questions on Notice tracker launched",
     "body": "Sandra Brewer MLA has followed through on the commitment in her 2 August update: 14 Questions on Notice covering the Project Definition Plan, the Infrastructure WA business case findings, Taskforce meeting dates, campus security, the Criminal Law (Mental Impairment) Act 2023 and Department of Justice involvement, bed capacity by type through to 2029, and the relocation of the Claremont Therapeutic Riding Centre — lodged 11–13 August 2026, all currently awaiting a Ministerial answer. We've built a new page tracking every one, plus the historical questions already on the record, updated as answers land.",
     "link": "qons.html",
@@ -110,20 +126,20 @@
     "linkText": "Read the article on WAtoday"
   },
   {
-    "date": "2026-08-01",
-    "tag": "milestone",
-    "title": "Door-drop flyer distribution begins",
-    "body": "Printed flyers are being hand-delivered to households around Mount Claremont, directing residents to the petition and this site. The flyer is now also on the Take Action and Downloads pages, so it can be forwarded electronically to neighbours and shared in local groups. If you'd like flyers for your own street, get in touch.",
-    "link": "downloads.html",
-    "linkText": "Get the flyer from the Downloads page"
-  },
-  {
     "date": "2026-08-02",
     "tag": "reply",
     "title": "Update received from Sandra Brewer MLA, Member for Cottesloe",
     "body": "Ahead of Parliament's return, the local Member sent residents a written update — confirming the current Stage 1 scope, noting the same taskforce also covers the nearby Selby Older Adult Mental Health Service, and setting out a funding history that shows Stage 1 delivery has been pushed back in every State Budget since it was first funded in 2023–24. She's confirmed she'll lodge questions on notice with the relevant Ministers at the August sitting. Full letter now on the Correspondence page.",
     "link": "correspondence.html#brewer",
     "linkText": "Read the full letter on the Correspondence page"
+  },
+  {
+    "date": "2026-08-01",
+    "tag": "campaign-update",
+    "title": "Door-drop flyer distribution begins",
+    "body": "Printed flyers are being hand-delivered to households around Mount Claremont, directing residents to the petition and this site. The flyer is now also on the Take Action and Downloads pages, so it can be forwarded electronically to neighbours and shared in local groups. If you'd like flyers for your own street, get in touch.",
+    "link": "downloads.html",
+    "linkText": "Get the flyer from the Downloads page"
   },
   {
     "date": "2026-07-24",
@@ -134,20 +150,20 @@
     "linkText": "See the request-by-request comparison"
   },
   {
+    "date": "2026-07-19",
+    "tag": "campaign-update",
+    "title": "Website and petition now live",
+    "body": "The community website and the Change.org petition have launched. If you're reading this after arriving from the petition, welcome — the concerns behind each ask are set out in full on the Concerns and Sources pages. If you're here first, you can sign the petition from the button at the top of this page.",
+    "link": "concerns.html",
+    "linkText": "Read the concerns behind the petition"
+  },
+  {
     "date": "2026-07-17",
     "tag": "reply",
     "title": "Reply by Nedlands Council",
     "body": "The City of Nedlands has responded to our letter and confirmed that it has had only limited involvement in the Graylands Campus Project to date, has not adopted a formal position on the proposal, and has not been asked to undertake consultation with residents, schools or community groups. The City also indicated that it could take a more proactive role going forward, including seeking further information from the State Government and improving communication with councillors and local stakeholders.",
     "link": "correspondence.html#nedlands",
     "linkText": "Read the Council's full reply"
-  },
-  {
-    "date": "2026-07-19",
-    "tag": "milestone",
-    "title": "Website and petition now live",
-    "body": "The community website and the Change.org petition have launched. If you're reading this after arriving from the petition, welcome — the concerns behind each ask are set out in full on the Concerns and Sources pages. If you're here first, you can sign the petition from the button at the top of this page.",
-    "link": "concerns.html",
-    "linkText": "Read the concerns behind the petition"
   },
   {
     "date": "2026-07-03",

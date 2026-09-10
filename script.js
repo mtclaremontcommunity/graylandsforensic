@@ -101,7 +101,8 @@ var UPDATE_TAG_LABELS = {
   sent: 'Sent',
   reply: 'Reply received',
   milestone: 'Milestone',
-  media: 'Media'
+  media: 'Media',
+  'campaign-update': 'Campaign update'
 };
 
 function loadUpdates() {
