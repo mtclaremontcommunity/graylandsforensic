@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="UTF-8">
 <!-- Google tag (gtag.js) -->
@@ -15,19 +15,68 @@
 <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
 <link rel="manifest" href="site.webmanifest">
-<title>This already happened once. We know how it ends. — Mount Claremont Community Network</title>
-<meta name="description" content="In 1990, a 646-signature petition and a detailed speech to the WA Legislative Assembly warned government this exact plan would fail this exact way. It did. Read the full parliamentary record.">
+<title>1990: Parliament was warned about Graylands — Mount Claremont Community Network</title>
+<meta name="description" content="Read the 1990 Hansard on Graylands: the written assurance, school and residential siting, security transitions and patient welfare, followed by the 1993 admission rules and 2014 leave failure.">
 <link rel="stylesheet" href="styles.css">
 <link rel="canonical" href="https://mtclaremontcommunity.github.io/graylandsforensic/1990-warning.html">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="This already happened once. We know how it ends.">
-<meta property="og:description" content="In 1990, Parliament was warned this exact plan would fail this exact way. It did. Now it's 2026, and nobody can say they weren't told.">
+<meta property="og:title" content="They were warned before Frankland was built.">
+<meta property="og:description" content="Read the 1990 Hansard on Graylands: the written assurance, school and residential siting, security transitions and patient welfare, followed by the 1993 admission rules and 2014 leave failure.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mtclaremontcommunity.github.io/graylandsforensic/1990-warning.html">
 <meta property="og:site_name" content="Mount Claremont Community Network">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="This already happened once. We know how it ends.">
-<meta name="twitter:description" content="In 1990, Parliament was warned this exact plan would fail this exact way. It did. Now it's 2026.">
+<meta name="twitter:title" content="They were warned before Frankland was built.">
+<meta name="twitter:description" content="Read the 1990 Hansard on Graylands: the written assurance, school and residential siting, security transitions and patient welfare, followed by the 1993 admission rules and 2014 leave failure.">
+<style>
+/* Page-specific additions; the shared site design and scripts remain in use. */
+.warning-page .hero { padding-bottom: 24px; }
+.warning-page .hero h1 { max-width: 21ch; }
+.warning-page .hero .sub { max-width: 62ch; }
+.warning-page .record-intro { font-size: .91rem; color: var(--slate); }
+.warning-page .record-jumps { display: flex; flex-wrap: wrap; gap: 8px 18px; padding: 17px 0; margin: 0 0 24px; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); }
+.warning-page .record-jumps a { font-size: .9rem; font-weight: 500; }
+.warning-page .record-pair { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 16px; margin: 22px 0; }
+.warning-page .record-quote { margin: 20px 0; padding: 22px 24px; background: var(--panel); border: 1px solid var(--hairline); border-left: 4px solid var(--slate); border-radius: 0 8px 8px 0; min-width: 0; }
+.warning-page .record-pair .record-quote { margin: 0; }
+.warning-page .record-quote.accent { border-left-color: var(--brick); }
+.warning-page .record-label { display: block; margin-bottom: 12px; font-family: 'IBM Plex Mono', monospace; font-size: .74rem; line-height: 1.5; letter-spacing: .025em; color: var(--brick); text-transform: uppercase; }
+.warning-page blockquote { margin: 0; padding: 0; font-family: 'Source Serif 4', Georgia, serif; font-size: 1.13rem; line-height: 1.55; }
+.warning-page blockquote p { margin: 0 0 .8em; }
+.warning-page blockquote p:last-child { margin-bottom: 0; }
+.warning-page .record-quote figcaption { margin-top: 14px; font-size: .83rem; line-height: 1.6; color: var(--slate); }
+.warning-page .record-quote figcaption a { color: var(--slate); }
+.warning-page .record-note { font-size: .89rem; line-height: 1.65; color: var(--slate); }
+.warning-page .record-note a { overflow-wrap: anywhere; }
+.warning-page .record-table-wrap { overflow-x: auto; margin: 22px 0; border: 1px solid var(--hairline); border-radius: 8px; background: var(--panel); }
+.warning-page .record-table { margin: 0; min-width: 560px; }
+.warning-page .record-table th { background: var(--ink); color: #fff; }
+.warning-page .record-table td:first-child { width: 24%; font-weight: 600; }
+.warning-page .record-table td p:last-child { margin-bottom: 0; }
+.warning-page .record-table caption { padding: 12px 14px; text-align: left; font-size: .9rem; font-weight: 500; }
+.warning-page .record-detail { margin: 20px 0; padding: 0 20px; background: var(--panel); border: 1px solid var(--hairline); border-radius: 8px; }
+.warning-page .record-detail summary { padding: 16px 0; cursor: pointer; font-weight: 600; line-height: 1.5; }
+.warning-page .record-detail[open] { padding-bottom: 5px; }
+.warning-page .record-detail h3 { margin-top: 18px; }
+.warning-page .record-ask-list { padding-left: 1.3em; }
+.warning-page .record-ask-list li { padding-left: .25em; margin-bottom: 15px; }
+.warning-page .record-sources { font-size: .9rem; padding-left: 1.25em; }
+.warning-page .record-sources li { margin-bottom: 10px; }
+.warning-page .record-sources a { overflow-wrap: anywhere; }
+.warning-page :target { scroll-margin-top: 105px; }
+.warning-page a:focus-visible, .warning-page summary:focus-visible { outline: 3px solid var(--brick); outline-offset: 4px; }
+@media (max-width: 700px) {
+  .warning-page .record-pair { grid-template-columns: minmax(0,1fr); }
+  .warning-page .record-quote { padding: 19px 20px; }
+  .warning-page .hero { padding-top: 36px; }
+}
+@media print {
+  .warning-page .record-quote { break-inside: avoid; }
+  .warning-page .record-jumps { display: none; }
+  .warning-page .record-table { min-width: 0; }
+}
+
+</style>
 </head>
 <body>
 
@@ -75,170 +124,294 @@
   </div>
 </header>
 
-<main>
+<main class="warning-page">
   <div class="wrap">
 
     <section class="hero">
-      <span class="eyebrow strapline">THE PARLIAMENTARY RECORD, IN FULL</span>
-      <h1>This already happened once. We know exactly how it ends.</h1>
-      <p class="sub">In 1990, before the site's first secure forensic unit was even built, a 646-signature petition and a detailed speech to the WA Legislative Assembly warned government this exact plan would produce this exact set of failures. Two written assurances to this neighbourhood had already been broken. The warnings were not acted on. Everything predicted came true, repeatedly, over the following three decades. This page sets out that record in full — what was promised, what was warned, and what happened next — because in 2026, at the same site, we are being asked to trust the same silence a second time.</p>
-    </section>
-
-    <section>
-      <h2>The same pattern, 36 years apart</h2>
-      <p class="lede" style="margin-top:-8px;">Not a loose echo — the same specific moves, in the same order, at the same address.</p>
-      <div class="plan-gallery two-col">
-        <div class="plan-card">
-          <div class="plan-card-body">
-            <span class="plan-card-tag" style="margin-left:0;">1990</span>
-            <h3>What happened then</h3>
-            <p>Two written assurances to this neighbourhood were broken before a decision was made. A 646-signature petition asked for consultation <em>before</em> the decision, not after. A sitting MP told Parliament, in detail, which specific failures were coming. Government built the facility anyway, without the buffer or the isolation he asked for.</p>
-          </div>
-        </div>
-        <div class="plan-card">
-          <div class="plan-card-body">
-            <span class="plan-card-tag" style="margin-left:0;">2026</span>
-            <h3>What's happening now</h3>
-            <p>No formal consultation with residents or schools has been identified anywhere in five years of planning. The government's own independent adviser found the business case inadequate; it was funded three weeks later. The specific failure mode Parliament was warned about in 1990 — transition-related absconding — is still undisclosed and unaddressed in the plan now on the table.</p>
-          </div>
-        </div>
-      </div>
+      <span class="eyebrow strapline">1990: what Parliament was told</span>
+      <h1>They were warned before Frankland was built.</h1>
+      <p class="sub">A written assurance about Graylands’ patients. Government land sales and a school relocation. A 646-signature petition. A warning that security had to cover the move from a secure ward into the community. All were recorded in Parliament before the Frankland Centre opened. The later record shows why the next expansion must answer those questions before it proceeds.</p>
       <div class="callout">
-        <p><strong>The difference that matters is not what happened. It's what we now know.</strong> In 1990, government could plausibly say the risks were theoretical. In 2026, they are not — they are a documented, dated, sourced 36-year record, most of it produced at this exact address. Proceeding without answering it isn't repeating a mistake. It's choosing to.</p>
+        <p><strong>The issue was already more than the strength of a fence.</strong> Parliament was told how government decisions had changed the site, why residents and schools objected, and where responsibility for security could fail. Those are the questions a new building alone cannot settle.</p>
       </div>
+      <p class="record-intro">The quotations below reproduce the 1990 parliamentary record, with the speaker and printed Hansard page identified. Historical terms, including “criminally insane”, are retained inside attributed quotations. Ellipses mark omitted words. <a href="#the-sources">Open the original records →</a></p>
     </section>
 
-    <hr class="hairline">
+    <nav class="record-jumps" aria-label="On this page">
+      <a href="#the-assurance">The assurance</a>
+      <a href="#the-site">The site decisions</a>
+      <a href="#the-petition">The petition</a>
+      <a href="#the-warning">The security warning</a>
+      <a href="#patient-welfare">Patient welfare</a>
+      <a href="#what-followed">What followed</a>
+      <a href="#stand-up">What must happen now</a>
+    </nav>
 
-    <section>
-      <h2>What was promised — and what happened instead</h2>
-      <p class="lede" style="margin-top:-8px;">Two specific, written assurances were given to this neighbourhood before the 1989 decision to build a forensic unit at Graylands. Both were broken. This is the parliamentary record of both, side by side with what actually happened.</p>
+    <section id="the-assurance">
+      <h2>An assurance about the patients. A different outcome.</h2>
+      <p>On 29 November 1990, Colin Barnett, the member for Cottesloe, traced the changes preceding the proposed unit. He described the separation of Swanbourne and Graylands hospitals in 1980, followed by Swanbourne’s closure in 1983. Some patients went to Fremantle Prison; others went to Graylands. A concerned resident, Mrs Jones, had written to the Health Department about the closure and security at Graylands.</p>
 
-      <div class="action-pair">
-        <div class="card action-card" style="border-left:4px solid var(--slate);">
-          <span class="verified-tag">PROMISED — 1983</span>
-          <h3>"The nature of the patient population... will not affect"</h3>
-          <p>When the neighbouring Swanbourne Hospital — which held the site's forensic patients — closed in 1983, a resident named in Hansard as Mrs Jones wrote to the Health Department's Mental Health Services division, concerned that people with criminal histories would end up at Graylands instead. The Director of Mental Health Services, Mr F. Bell, replied in writing that the closure would not affect the nature of the patient population at Graylands Hospital. The two hospitals, he said, were separate entities.</p>
-        </div>
-        <div class="card action-card" style="border-left:4px solid var(--brick);">
-          <span class="verified-tag verified-tag-register">WHAT HAPPENED</span>
-          <h3>It did affect it. Within a few years.</h3>
-          <p>By the time Colin Barnett addressed Parliament in November 1990, he stated plainly that this had not been the case since Bell's letter was written, and that some of the site's most disturbed and dangerous patients had been placed at Graylands in very low security. The written assurance did not survive contact with what government actually did next.</p>
-        </div>
+      <div class="record-pair">
+        <figure class="record-quote">
+          <span class="record-label">The Director’s written assurance</span>
+          <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=80" data-hansard-page="8174">
+            <p>“The closure of the Swanbourne Hospital will not affect in any way the nature of the patient population at the Graylands Hospital. The two hospitals are separate entities.”</p>
+          </blockquote>
+          <figcaption>Mr F. Bell, Director of Mental Health Services, in the letter read into the record by Barnett. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=80" target="_blank" rel="noopener">29 November 1990, p.8174 ↗</a></figcaption>
+        </figure>
+        <figure class="record-quote accent">
+          <span class="record-label">Barnett’s account of what followed</span>
+          <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=80" data-hansard-page="8174">
+            <p>“However, that has not been the case since that letter was written and some of these quite dangerous and very disturbed people have been placed in low security facilities at Graylands Hospital.”</p>
+          </blockquote>
+          <figcaption>Colin Barnett MLA, in the same passage. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=80" target="_blank" rel="noopener">29 November 1990, p.8174 ↗</a></figcaption>
+        </figure>
       </div>
 
-      <div class="action-pair">
-        <div class="card action-card" style="border-left:4px solid var(--slate);">
-          <span class="verified-tag">PROMISED — c.1983–86</span>
-          <h3>"No facility for the criminally insane... would be established"</h3>
-          <p>Under LandCorp's supervision, government sold the land for the neighbouring St John's Wood residential estate. Purchasers were, in Barnett's words to Parliament, of the firm opinion that no facility for the criminally insane or mentally ill offenders would be established on adjacent land. John XXIII College relocated onto the adjoining former hospital land in 1986 on a similar assurance, given in various forms by government.</p>
-        </div>
-        <div class="card action-card" style="border-left:4px solid var(--brick);">
-          <span class="verified-tag verified-tag-register">WHAT HAPPENED</span>
-          <h3>Government decided to build exactly that. In 1989.</h3>
-          <p>Three years after John XXIII arrived, and not long after the St John's Wood estate had sold on the strength of that assurance, the State Government decided to build a dedicated maximum-security forensic unit at Graylands — the same facility both assurances had specifically ruled out. Planning decisions by government had, in Barnett's words, meant a residential area and a school were established immediately adjacent to a use government already knew it intended to change.</p>
-        </div>
-      </div>
-
-      <div class="action-pair">
-        <div class="card action-card" style="border-left:4px solid var(--slate);">
-          <span class="verified-tag">ASKED — 8 May 1990</span>
-          <h3>"Fully discussed with and justified to the community... before"</h3>
-          <p>A 646-signature petition, tabled by the then-member for Cottesloe, Bill Hassell, asked government to abandon the plan outright — or, failing that, that any future version be fully discussed with and justified to the community and all relevant authorities before a decision was made. Not after one.</p>
-        </div>
-        <div class="card action-card" style="border-left:4px solid var(--brick);">
-          <span class="verified-tag verified-tag-register">WHAT HAPPENED</span>
-          <h3>Neither, at the time. A narrower process, later.</h3>
-          <p>Government did not abandon the plan, and did not run the kind of before-the-decision process the petition asked for. When Health Minister Peter Foss did run a public consultation in 1993, it covered only who could be admitted to the already-approved 30-bed unit — not whether to build it, or where. Full detail on that process, and how it compares to today, is in <a href="history.html#1993-precedent">the history page</a>.</p>
-        </div>
-      </div>
+      <p><strong>The contrast is explicit in Hansard:</strong> an assurance that the nature of the patient population would remain unchanged, followed by Barnett’s account that the assurance had not held. For today’s expansion, the corresponding questions are concrete: which patient groups will be admitted, what security and staffing each requires, who authorises changes, and how those changes will be disclosed.</p>
     </section>
 
-    <hr class="hairline">
+    <section id="the-site">
+      <h2>Government helped create the neighbourhood beside the hospital.</h2>
+      <p>Barnett described government selling former hospital land, under LandCorp’s supervision, for the St John’s Wood estate. He recorded purchasers’ firm expectation that a forensic facility would not be established next door. He separately described John XXIII College’s relocation following consultation with government:</p>
 
-    <section>
-      <h2>What Parliament was warned — and what happened anyway</h2>
-      <p class="lede" style="margin-top:-8px;">These are not general objections. They are specific, named mechanisms, put on the record before the facility existed, that later produced specific, documented, dated incidents.</p>
-
-      <div class="action-pair">
-        <div class="card action-card" style="border-left:4px solid var(--slate);">
-          <span class="verified-tag">WARNED — 29 Nov 1990</span>
-          <h3>"An inherent risk... it is inevitable"</h3>
-          <p>Colin Barnett told the Legislative Assembly that moving offenders progressively from high to low to no security carried a risk that could not be engineered away, and that it was inevitable — not merely possible — that mentally ill offenders would commit further offences against civil patients, residents, or children during that process. He asked for a physical buffer at the point of first transition. None was built.</p>
-        </div>
-        <div class="card action-card" style="border-left:4px solid var(--brick);">
-          <span class="verified-tag verified-tag-register">WHAT HAPPENED — 2004 to 2015</span>
-          <h3>The exact mechanism, on repeat.</h3>
-          <p>Failures clustering specifically at transitions between security levels: a 2010 patient's repeated unauthorised absences during ward moves; a June 2014 abscond from the Frankland Centre during a security-tier transition; an October 2014 failure to return from a supervised leave arrangement — the case where the sitting Premier, Colin Barnett himself, said only that the correct procedures had been followed. <a href="safety-record.html#the-log">The full log →</a></p>
-        </div>
+      <div class="record-pair">
+        <figure class="record-quote">
+          <span class="record-label">The purchasers’ expectation</span>
+          <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" data-hansard-page="8175">
+            <p>“The people involved in that development, and those who purchased land, were of the firm opinion that no facility for the criminally insane or for mentally ill offenders would be established on adjacent land.”</p>
+          </blockquote>
+          <figcaption>Colin Barnett MLA, describing St John’s Wood. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" target="_blank" rel="noopener">29 November 1990, p.8175 ↗</a></figcaption>
+        </figure>
+        <figure class="record-quote accent">
+          <span class="record-label">What the college was told</span>
+          <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" data-hansard-page="8175">
+            <p>“The college administration was under the impression, and was assured in various ways, that there would be no placement of mentally ill offenders in that area.”</p>
+          </blockquote>
+          <figcaption>Colin Barnett MLA, describing John XXIII College. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" target="_blank" rel="noopener">29 November 1990, p.8175 ↗</a></figcaption>
+        </figure>
       </div>
 
-      <div class="action-pair">
-        <div class="card action-card" style="border-left:4px solid var(--slate);">
-          <span class="verified-tag">WARNED — 29 Nov 1990</span>
-          <h3>"Graylands has a history of security breaches"</h3>
-          <p>Barnett told the House that mentally ill offenders and dangerous people had already wandered into the adjoining residential area — three people he considered dangerous had absconded that year alone, one having recently committed a serious stabbing, and in 1987 a Graylands patient in low-security care had sexually assaulted a young girl after leaving the hospital.</p>
-        </div>
-        <div class="card action-card" style="border-left:4px solid var(--brick);">
-          <span class="verified-tag verified-tag-register">WHAT HAPPENED — 2004 to 2025</span>
-          <h3>Absconding didn't stop. It's the most frequent risk on record.</h3>
-          <p>A September 2004 escape from a unit the Attorney-General had called escape-proof; a homicide in 2018 following an absconding two days after a diagnosis later found to be wrong; a 2023 case where government's only answer, fourteen months on, was to dispute the word "escape." In the one year with a published breakdown, this hospital recorded seven times the next-highest WA facility's absconding rate. <a href="safety-record.html#the-log">The full log →</a></p>
-        </div>
-      </div>
+      <p>He placed the <strong>July 1989 decision to build the forensic unit at Graylands</strong> against that background of assurances and expectations. The question of public trust arose from the gap between what the neighbours understood and what government subsequently decided to build.</p>
 
-      <div class="action-pair">
-        <div class="card action-card" style="border-left:4px solid var(--slate);">
-          <span class="verified-tag">SAID — 29 Nov 1990</span>
-          <h3>"A very reasoned and responsible opposition"</h3>
-          <p>Barnett pre-empted the label this kind of objection is always given: he told Parliament the opposition came from informed people, distinct from panic, and drew a direct line between community safety and patient welfare — invoking, in the same speech, "the best care and due sympathy for those patients."</p>
-        </div>
-        <div class="card action-card" style="border-left:4px solid var(--brick);">
-          <span class="verified-tag verified-tag-register">36 YEARS LATER</span>
-          <h3>The same characterisation is still being made — and still needs making.</h3>
-          <p>This campaign supports forensic mental health services being properly resourced in Western Australia. Its concern is whether this site, this process, and this evidence base meet the standard the public is entitled to — not politics, and not the patients. That is the same distinction Barnett drew in 1990, about the same site.</p>
-        </div>
-      </div>
-    </section>
+      <figure class="record-quote accent">
+        <span class="record-label">His central point about the location</span>
+        <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" data-hansard-page="8175">
+          <p>“Government involvement has changed the nature of the site, and the proposed forensic unit is adjacent to a growing residential area, John XXIII College and Graylands Primary School is very close as well.”</p>
+        </blockquote>
+        <figcaption>Colin Barnett MLA. He went on to describe the proposed unit as within 200 metres of a school playground. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" target="_blank" rel="noopener">29 November 1990, p.8175 ↗</a></figcaption>
+      </figure>
 
-    <hr class="hairline">
-
-    <section>
-      <h2>The petition, and the man who warned Parliament</h2>
-      <p>On 8 May 1990, the sitting member for Cottesloe, Bill Hassell, tabled a 646-signature community petition against the plan. Hassell resigned that June. The by-election that followed sent Colin Barnett to Cottesloe — Barnett went on to serve as Premier of Western Australia from 2008 to 2017. Within months of taking his seat, on 29 November 1990, he set out the full case above to the Legislative Assembly, sourced and detailed, six years before the purpose-built facility even existed.</p>
-      <p>He also put an unpublicised detail on the record that resists any simple residents-versus-patients framing: the mother of one of the state's most serious offenders had phoned him — not to attack him, but to say she hoped her own son would not be placed in a residential-area unit either, because the attention it would draw would make his rehabilitation harder.</p>
       <div class="callout">
-        <p><strong>The same man later held the office where his own warning was tested.</strong> In October 2014, a Frankland Centre patient failed to return from approved leave — the exact transition failure Barnett's 1990 speech had described. He was Premier at the time. His response was that the correct procedures had been followed: "I'm sure he'll either turn up or be found." The standard he demanded of government as a backbencher in opposition was not the standard he applied when the mechanism he had named actually failed, on his own watch.</p>
+        <p><strong>The history of the hospital does not settle the suitability of every later use.</strong> Parliament was told that government had helped establish the surrounding homes and school, then selected the adjoining land for a specialist forensic unit. Any further expansion needs to be assessed against the neighbourhood that exists now. <a href="the-site.html">See the current site and plans →</a></p>
       </div>
-      <p style="font-size:0.9rem;">Full transcripts: <a href="assets/hansard-1990-05-08-graylands-petition.pdf" target="_blank" rel="noopener">Hansard, 8 May 1990</a> · <a href="assets/hansard-1990-11-29-graylands-debate.pdf" target="_blank" rel="noopener">Hansard, 29 November 1990</a></p>
+      <p class="record-note">The playground distance above describes the proposed 1990 unit in Barnett’s speech; it is not a measurement of the current expansion plans.</p>
+
+      <details class="record-detail" id="existing-patients">
+        <summary>The “patients are already here” argument was made in 1990 too</summary>
+        <p>Barnett expressly acknowledged that mentally ill offenders had been on the site. His distinction was the absence of a specialist facility following the hospital split:</p>
+        <figure class="record-quote">
+          <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=80" data-hansard-page="8174">
+            <p>“such patients have been on site, but no specialist facility has been provided.”</p>
+          </blockquote>
+          <figcaption>Colin Barnett MLA. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=80" target="_blank" rel="noopener">p.8174 ↗</a></figcaption>
+        </figure>
+        <p>During an exchange about a particular patient, Premier Carmen Lawrence interjected:</p>
+        <figure class="record-quote">
+          <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=82" data-hansard-page="8176">
+            <p>“I am asking the question because most of those people are in Graylands right now.”</p>
+          </blockquote>
+          <figcaption>Premier Carmen Lawrence. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=82" target="_blank" rel="noopener">p.8176 ↗</a></figcaption>
+        </figure>
+        <p>The exchange matters today: the existing service is part of the evidence, but the proposed scale, location, patient mix and operating model still need their own justification.</p>
+      </details>
+
+      <details class="record-detail" id="the-alternatives">
+        <summary>The reports, the alternative location and the disputed security assessment</summary>
+        <p>Barnett set out a sequence of professional and government reports. The table records his account in Hansard.</p>
+        <div class="record-table-wrap" role="region" aria-label="Reports described in the 1990 speech" tabindex="0">
+          <table class="record-table">
+            <caption>The decision was preceded by competing recommendations.</caption>
+            <thead><tr><th scope="col">Report or decision</th><th scope="col">What Barnett put on the record</th></tr></thead>
+            <tbody>
+              <tr><td>1978 professional subcommittee</td><td>A WA subcommittee of the Royal Australian and New Zealand College of Psychiatrists recommended secure facilities under Corrective Services control; Barnett said the decision was ratified five years later. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=80" target="_blank" rel="noopener">p.8174 ↗</a></td></tr>
+              <tr><td>1985 Cramond–Harding report</td><td>The external inquiry recommended a separate unit within a multifunctional prison facility, identified in the speech as Casuarina. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=80" target="_blank" rel="noopener">p.8174 ↗</a></td></tr>
+              <tr><td>Hill report</td><td>The departmental response objected to that recommendation, regarding a prison as incompatible with psychiatric treatment. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=80" target="_blank" rel="noopener">p.8174 ↗</a></td></tr>
+              <tr><td>1988 Murray committee</td><td>The committee recommended Graylands. Barnett recorded criticism that it had not addressed security or some findings of the earlier external inquiry. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" target="_blank" rel="noopener">p.8175 ↗</a></td></tr>
+              <tr><td>July 1989 government decision</td><td>The decision to build at Graylands followed the Murray committee’s recommendation. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" target="_blank" rel="noopener">p.8175 ↗</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <figure class="record-quote accent">
+          <span class="record-label">The criticism of the report supporting Graylands</span>
+          <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" data-hansard-page="8175">
+            <p>“The Murray committee report has subsequently been criticised because it did not address matters of security or some of the findings of the original Cramond–Harding report.”</p>
+          </blockquote>
+          <figcaption>Colin Barnett MLA. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" target="_blank" rel="noopener">p.8175 ↗</a></figcaption>
+        </figure>
+        <p>He also recorded support for hospital placement and acknowledged differing professional opinions. His closing position expressly stopped short of insisting on a prison:</p>
+        <figure class="record-quote">
+          <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" data-hansard-page="8177">
+            <p>“I am not arguing that these people should necessarily be placed in a prison facility because I am not competent to make that recommendation.”</p>
+          </blockquote>
+          <figcaption>Colin Barnett MLA. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" target="_blank" rel="noopener">p.8177 ↗</a></figcaption>
+        </figure>
+        <p><strong>The lesson for the present decision is to publish the comparison and the security assessment.</strong> A preference for hospital-based treatment does not, by itself, resolve which hospital site or configuration best meets clinical and community needs.</p>
+      </details>
     </section>
 
-    <hr class="hairline">
+    <section id="the-petition">
+      <h2>646 signatures. The word was “before”.</h2>
+      <p>On 8 May 1990, Bill Hassell, then the member for Cottesloe, tabled Petition No. 9 with 646 signatures. It asked for the plan to be abandoned and for any future proposal in a populous suburb beside schools and playgrounds to meet this requirement:</p>
+      <figure class="record-quote accent">
+        <span class="record-label">The petition’s second request</span>
+        <blockquote cite="assets/hansard-1990-05-08-graylands-petition.pdf#page=1" data-hansard-page="320">
+          <p>“Any future plan to open a prison/forensic unit within a populous suburb and next to schools and playgrounds be fully discussed with and justified to the community and all relevant authorities and interests before such future decision is made.”</p>
+        </blockquote>
+        <figcaption>Community petition tabled by Bill Hassell MLA. <a href="assets/hansard-1990-05-08-graylands-petition.pdf#page=1" target="_blank" rel="noopener">8 May 1990, p.320 ↗</a></figcaption>
+      </figure>
+      <p>By November, Barnett named organised opposition from John XXIII College’s committee and the St John’s Wood Residents’ Association. He described it as “a very reasoned and responsible opposition coming from informed people”. He also recorded that the Premier had met a college delegation in September and that it had sought an independent public inquiry into security. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" target="_blank" rel="noopener">pp.8175–8176 ↗</a></p>
+      <p><strong>The request was for a reasoned site decision with public scrutiny before commitment.</strong> The later consultation on admission guidelines was useful, but answered a narrower question after the unit had been built.</p>
+    </section>
 
-    <section>
-      <h2>What's changed since 1990 — and what hasn't</h2>
-      <p><strong>What's changed:</strong> the legal model. The Criminal Law (Mental Impairment) Act 2023 replaced indefinite detention with fixed limiting terms and made staged community reintegration a statutory purpose, not a discretionary exception. That is a genuine, structural change — patients now move through security tiers, toward community access, on a legislated timetable. <a href="the-issue.html#clmi">See what the CLMI Act actually changed →</a></p>
-      <p><strong>What hasn't changed:</strong> the exact mechanism Barnett warned about in 1990 is the same mechanism the CLMI Act now runs more often, not less. Every transition between security levels is a point his own speech identified as where failures cluster. A law that increases how frequently that transition happens, layered onto a site that has never published an assessment of how it manages that transition safely, is not a reason for less scrutiny of the 1990 warning. It's the reason the warning matters more now than it did then.</p>
+    <section id="the-warning">
+      <h2>The warning covered what happens beyond a secure ward.</h2>
+      <p>Barnett accepted that a forensic unit could be made highly secure. His concern extended to transfers into lower security, the surrounding hospital and neighbourhood, and who carried responsibility for protection throughout that process.</p>
+      <figure class="record-quote accent">
+        <span class="record-label">The warning, in his own words</span>
+        <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" data-hansard-page="8177">
+          <p>“Fourthly, part of the treatment and rehabilitation of mentally ill offenders involves a transition process, with offenders progressively being taken from areas of high security to low security to presumably no security. If that process works well, hopefully the treatment has been successful and they are rehabilitated. In doing that, there is an inherent risk and it is inevitable that there will be cases of failures in the process and mentally ill offenders will commit further offences against innocent parties, whether they be civil patients or residents or children.”</p>
+        </blockquote>
+        <figcaption>Colin Barnett MLA. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" target="_blank" rel="noopener">29 November 1990, p.8177 ↗</a></figcaption>
+      </figure>
+      <p>His proposed response was a physical separation at the first transition out of the highest security:</p>
+      <figure class="record-quote">
+        <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" data-hansard-page="8177">
+          <p>“It therefore requires for those most dangerous patients, the criminally insane, that the first transition from the highest security, a forensic unit, should be protected by some form of buffer zone.”</p>
+        </blockquote>
+        <figcaption>Colin Barnett MLA. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" target="_blank" rel="noopener">p.8177 ↗</a></figcaption>
+      </figure>
+      <p class="record-note">The buffer in this passage is separation for security during rehabilitation. The <a href="the-buffer.html">Subiaco wastewater odour buffer</a> is a separate planning constraint.</p>
+
+      <h3>He also asked who would carry the security responsibility.</h3>
+      <figure class="record-quote">
+        <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" data-hansard-page="8177">
+          <p>“I think it is unreasonable that medical professionals should be given the added responsibility of providing security for these people and the responsibility of ensuring the security of adjoining residents and school children.”</p>
+        </blockquote>
+        <figcaption>Colin Barnett MLA. The next sentence calls for security professionals to handle those matters. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" target="_blank" rel="noopener">p.8177 ↗</a></figcaption>
+      </figure>
+      <p>That makes staffing, handovers, supervision, escalation and public notification central to the case. The community needs to see how responsibility is assigned when a patient changes ward, leaves the campus or fails to return.</p>
+
+      <details class="record-detail" id="already-known">
+        <summary>These were already known concerns in 1990</summary>
+        <figure class="record-quote accent">
+          <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" data-hansard-page="8177">
+            <p>“I remind members that Graylands has a history of security breaches. Mentally ill offenders and dangerous people have wandered into the adjoining residential area. In fact, three people who could be considered dangerous have wandered out this year.”</p>
+          </blockquote>
+          <figcaption>Colin Barnett MLA. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" target="_blank" rel="noopener">p.8177 ↗</a></figcaption>
+        </figure>
+        <p>In the same passage he described a sexual assault after a patient left low-security care three years earlier. He expressly distinguished that patient from an offender. These were events discussed <em>before</em> Frankland existed, involving the wider Graylands service. They explain why his 1990 warning was based on experience already reported to Parliament.</p>
+      </details>
+    </section>
+
+    <section id="patient-welfare">
+      <h2>Patient welfare was part of the case from the beginning.</h2>
+      <p>Barnett recorded an unexpected call from the mother of a patient whose identity he withheld. She supported his concern about the location because she feared the effect on her son’s rehabilitation:</p>
+      <figure class="record-quote">
+        <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=82" data-hansard-page="8176">
+          <p>“She said that she hoped her son was not put in a forensic unit in a residential area because that would concentrate public opinion on him and other patients. That would make it more difficult for her son to be rehabilitated.”</p>
+        </blockquote>
+        <figcaption>Barnett’s account of the mother’s concern. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=82" target="_blank" rel="noopener">29 November 1990, p.8176 ↗</a></figcaption>
+      </figure>
+      <p>He also discussed the risk of stigma attaching to the hospital’s civil patients and their families. His own summary joined patient care and public safety:</p>
+      <figure class="record-quote accent">
+        <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=82" data-hansard-page="8176">
+          <p>“It is an issue that involves the best care and due sympathy for those patients. It is an issue that also has important implications for public safety and the security and safety of the patients concerned.”</p>
+        </blockquote>
+        <figcaption>Colin Barnett MLA. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=82" target="_blank" rel="noopener">p.8176 ↗</a></figcaption>
+      </figure>
+      <p><strong>A well-chosen, properly resourced service should protect patients, clinical staff, families and neighbours together.</strong> Those groups all have an interest in a credible location assessment, clear responsibilities and arrangements that support treatment without leaving foreseeable risks unanswered.</p>
+    </section>
+
+    <section id="what-followed">
+      <h2>What government subsequently did</h2>
+
+      <h3 id="admission-1993">1993: existing patients could move; admission rules went to consultation.</h3>
+      <p>On 10 October 1993, Health Minister Peter Foss announced that Frankland would be ready on <strong>25 October</strong>. Existing Graylands patients eligible under the current admission policy would move into it. He said:</p>
+      <figure class="record-quote">
+        <blockquote cite="https://www.wa.gov.au/government/media-statements/Court%20Coalition%20Government/Secure-wing-at-Graylands-Hospital-ready-October-25-19931010">
+          <p>“No person will be admitted unless they would previously have qualified for admission to the old facility.”</p>
+        </blockquote>
+        <figcaption>Health Minister Peter Foss. <a href="https://www.wa.gov.au/government/media-statements/Court%20Coalition%20Government/Secure-wing-at-Graylands-Hospital-ready-October-25-19931010" target="_blank" rel="noopener">WA Government statement, 10 October 1993 ↗</a></figcaption>
+      </figure>
+      <p>Forensic admission required specialist and departmental clinical endorsements, a Health Minister recommendation to the Attorney-General, and agreement by the Governor in Executive Council. Eligibility depended on treatable psychiatric illness; custody alone was insufficient, with provision for return to a correctional facility.</p>
+      <p>It announced newspaper advertisements, letters and pamphlets about proposed admission guidelines. Comments closed <strong>30 November 1993</strong>, after the announced move-in date for existing eligible patients; review was scheduled for <strong>1 July 1994</strong>. <a href="https://www.wa.gov.au/government/media-statements/Court%20Coalition%20Government/Secure-wing-at-Graylands-Hospital-ready-October-25-19931010" target="_blank" rel="noopener">Read the arrangements ↗</a></p>
       <div class="callout">
-        <p><strong>We are not being asked to imagine what could go wrong. We are being shown, on the public record, at this exact address, what already did — and told it won't happen again, with less published evidence for that claim than government itself provided in 1993.</strong> That is the whole case for pausing before Stage 2 proceeds.</p>
+        <p><strong>This precedent gives today’s community two separate standards to ask for:</strong> scrutiny of the location before further commitment, and published admission and operating rules before patients move in. Consultation about the second cannot substitute for answering the first. <a href="history.html#1993-precedent">Read the wider community history →</a></p>
       </div>
+
+      <h3 id="barnett-2014">2014: the MP who warned Parliament was now Premier.</h3>
+      <p>Enoch Walsh failed to return from authorised leave on <strong>5 October 2014</strong>. ABC reported that he had been staying at Romily House, a low-security care facility in Claremont, and that the review board was working with police and Frankland staff to return him to custody. Police warned the public not to approach him.</p>
+      <div class="record-pair">
+        <figure class="record-quote">
+          <span class="record-label">Barnett in opposition · 1990</span>
+          <blockquote cite="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" data-hansard-page="8177">
+            <p>“We should create a specialist facility which is situated in an isolated area surrounded by a buffer zone. It will cost money and it will cause inconvenience to psychiatric staff, but that is a cost this community must bear.”</p>
+          </blockquote>
+          <figcaption>Colin Barnett MLA. <a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" target="_blank" rel="noopener">29 November 1990, p.8177 ↗</a></figcaption>
+        </figure>
+        <figure class="record-quote accent">
+          <span class="record-label">Barnett as Premier · 2014</span>
+          <blockquote cite="https://www.abc.net.au/news/2014-10-07/police-search-for-escaped-graylands-patient/5796070">
+            <p>“The correct procedures were followed”</p>
+            <p>“I’m sure he’ll either turn up or be found.”</p>
+          </blockquote>
+          <figcaption>Two excerpts from Premier Colin Barnett’s response. <a href="https://www.abc.net.au/news/2014-10-07/police-search-for-escaped-graylands-patient/5796070" target="_blank" rel="noopener">ABC News, 7 October 2014, updated 9 October ↗</a></figcaption>
+        </figure>
+      </div>
+      <p>Barnett defended the handling of the absence; Attorney-General Michael Mischin said Walsh had previously complied with leave conditions. Opposition Leader Mark McGowan criticised the delay in informing the public. <a href="https://www.abc.net.au/news/2014-10-07/police-search-for-escaped-graylands-patient/5796070" target="_blank" rel="noopener">Read the report and responses ↗</a></p>
+      <p><strong>The contrast is between the safeguard demanded in 1990 and the reassurance offered in 2014.</strong> This was a failure to return from authorised leave at another facility, rather than a breach of Frankland’s perimeter. It illustrates why security must be assessed across the care pathway, including what happens when an authorised arrangement fails. A statement that procedures were followed does not answer whether those procedures provided adequate protection.</p>
+      <p>Graded security and community leave were part of this history long before the 2023 mental-impairment legislation. The present question is how the proposed expansion’s operating model addresses that established experience. <a href="safety-record.html#the-log">See the separately sourced incident record →</a></p>
     </section>
 
     <section id="stand-up">
-      <h2>We already know how this story ends. Let's not find out again.</h2>
-      <p>Nobody in 1990 had the benefit of hindsight. Everybody in 2026 does. The petitioners of May 1990 and the MP who spoke that November were not wrong, and neither is this campaign. The difference this time is that we don't have to wait and see — we can simply ask government to show its work before an irreversible $698 million decision proceeds, using the same standard it met for a facility one-sixth this size, thirty-three years ago.</p>
+      <h2>Before the next expansion, answer the questions already on the record.</h2>
+      <p>The 1990 material establishes prior notice: the location, the surrounding schools and homes, the changing patient population, and the responsibilities involved in moving between levels of security were all raised in Parliament. The current proposal should show what has been learned from that history.</p>
+      <ol class="record-ask-list">
+        <li><strong>Publish the site comparison.</strong> Show how Graylands was assessed against alternatives, including today’s neighbouring schools and homes, clinical needs, security arrangements and future expansion.</li>
+        <li><strong>Publish an independent assessment of the whole care pathway.</strong> Address secure wards, transfers, lower-security care, authorised leave, failure to return, staff responsibilities and notification to affected neighbours.</li>
+        <li><strong>State the admission and operating rules.</strong> Explain the patient categories, eligibility, security levels, decision-makers and process for changing the model. The 1993 record shows that public explanations of these matters are possible.</li>
+        <li><strong>Show what changed after recorded failures.</strong> Identify the lessons, corrective actions and evidence that current arrangements work. Specify who is accountable when responsibilities cross agencies or facilities.</li>
+        <li><strong>Consult while the decision can still change.</strong> Give residents, schools, patients, families and staff the evidence and a meaningful opportunity to respond before further commitment to Stage 1 and later expansion.</li>
+      </ol>
+      <div class="callout">
+        <p><strong>Pause Stage 1. Publish the evidence. Justify the location.</strong> The petitioners asked for that sequence in 1990. The parliamentary and subsequent management records give today’s community a stronger basis for insisting on it.</p>
+      </div>
       <div class="cta-row">
         <a class="btn btn-primary" href="https://www.change.org/p/pause-the-698m-graylands-forensic-campus-expansion-show-us-why-this-makes-sense" target="_blank" rel="noopener">Sign the petition</a>
         <a class="btn btn-secondary" href="join-us.html">Get involved</a>
-        <a class="btn btn-secondary" href="downloads.html">Read the full research paper</a>
+        <a class="btn btn-secondary" href="foi.html">See the evidence requests</a>
       </div>
     </section>
 
-    <div class="source-note" style="margin-top:2rem; font-size:0.85rem; color:var(--slate);">
-      <p>Primary sources for this page: Hansard, WA Legislative Assembly, 8 May 1990 (Petition No. 9, p.320) and 29 November 1990 (pp.8173–8177) — full transcripts linked above and available on request; WA Government media statements, Hon. Peter Foss, 14 March and 10 October 1993; ABC News, 7 October 2014; Pamela Mikus, "Graylands: The Evolution of a Suburb" (Honours thesis, Murdoch University, 2013). <a class="cc-more" href="sources.html">Full source list →</a></p>
-    </div>
+    <section id="the-sources">
+      <h2>Read the original records</h2>
+      <p class="record-note">The Hansard links open the full sitting PDFs at the relevant PDF page. Printed parliamentary page numbers are given separately. Quotations from letters and other people’s accounts are identified as they appear in Barnett’s speech.</p>
+      <ol class="record-sources">
+        <li><a href="assets/hansard-1990-05-08-graylands-petition.pdf#page=1" target="_blank" rel="noopener">WA Legislative Assembly, 8 May 1990, p.320</a> — Petition No. 9, tabled by Bill Hassell; 646 signatures.</li>
+        <li><a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=80" target="_blank" rel="noopener">WA Legislative Assembly, 29 November 1990, p.8174</a> — hospital changes, the Bell letter, transfers and competing reports.</li>
+        <li><a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=81" target="_blank" rel="noopener">29 November 1990, p.8175</a> — the Murray committee, July 1989 decision, land sales, college assurances and school proximity.</li>
+        <li><a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=82" target="_blank" rel="noopener">29 November 1990, p.8176</a> — the mother’s call, Premier Lawrence’s interjection, the inquiry request and patient welfare.</li>
+        <li><a href="assets/hansard-1990-11-29-graylands-debate.pdf#page=83" target="_blank" rel="noopener">29 November 1990, p.8177</a> — transitions, a security buffer, staffing, previous incidents and Barnett’s conclusion.</li>
+        <li><a href="https://www.wa.gov.au/government/media-statements/Court%20Coalition%20Government/Secure-wing-at-Graylands-Hospital-ready-October-25-19931010" target="_blank" rel="noopener">WA Government, 10 October 1993: Frankland admission and consultation announcement</a>.</li>
+        <li><a href="https://www.abc.net.au/news/2014-10-07/police-search-for-escaped-graylands-patient/5796070" target="_blank" rel="noopener">ABC News, 7 October 2014, updated 9 October: the Walsh absence and government responses</a>.</li>
+      </ol>
+      <p class="record-note">See also: <a href="history.html">the longer site history</a> · <a href="safety-record.html">the safety record</a> · <a href="the-site.html">current plans and scale</a> · <a href="sources.html">full source list</a>.</p>
+    </section>
 
   </div>
 </main>
+
 
 <footer>
   <div class="wrap">
