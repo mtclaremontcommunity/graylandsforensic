@@ -16,19 +16,120 @@
 <link rel="apple-touch-icon" href="assets/icons/icon-180.png">
 <link rel="manifest" href="site.webmanifest">
 <title>The site — plans, scale and timeline — Graylands Forensic Mental Health Campus Expansion</title>
-<meta name="description" content="The actual architectural plans, the government's own masterplan diagram, the published procurement timeline, and what's now visibly under way on the ground — collected in one place, annotated and sourced.">
+<meta name="description" content="Official plans, scale and timeline for the Graylands forensic expansion, together with clearly labelled campaign artist impressions showing what the disclosed footprint could look like at ground level.">
 <link rel="stylesheet" href="styles.css">
+<style>
+/* Page-specific treatment for campaign-produced artist impressions. */
+.artist-impressions {
+  margin-top: 34px;
+  padding: 28px 0 4px;
+  border-top: 1px solid var(--hairline);
+}
+.artist-impressions > h3 {
+  font-size: clamp(1.35rem, 2.8vw, 1.7rem);
+  margin-top: 0.25em;
+}
+.impression-disclosure {
+  margin: 20px 0 26px;
+  padding: 16px 18px;
+  background: #fff8e8;
+  border: 1px solid #d8bd79;
+  border-left: 4px solid #9c6a16;
+  border-radius: 0 8px 8px 0;
+  color: var(--ink);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+.impression-gallery {
+  display: grid;
+  gap: 26px;
+  margin: 24px 0;
+}
+.impression-card {
+  margin: 0;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--hairline);
+  border-radius: 10px;
+}
+.impression-frame {
+  position: relative;
+  overflow: hidden;
+  background: #111820;
+  border-bottom: 1px solid var(--hairline);
+}
+.impression-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.impression-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  max-width: calc(100% - 24px);
+  padding: 8px 11px 7px;
+  color: #fff;
+  background: rgba(18, 27, 35, 0.94);
+  border-left: 4px solid #d78467;
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  font-family: 'IBM Plex Mono', monospace;
+  line-height: 1.25;
+}
+.impression-label strong {
+  display: block;
+  font-size: clamp(0.74rem, 1.5vw, 0.84rem);
+  letter-spacing: 0.045em;
+  text-transform: uppercase;
+}
+.impression-label span {
+  display: block;
+  margin-top: 3px;
+  color: #f2e9e5;
+  font-size: clamp(0.7rem, 1.25vw, 0.76rem);
+}
+.impression-card figcaption {
+  padding: 14px 18px 17px;
+  color: var(--slate);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+.impression-card figcaption strong {
+  color: var(--ink);
+}
+@media (max-width: 560px) {
+  .impression-label {
+    top: 8px;
+    left: 8px;
+    max-width: calc(100% - 16px);
+    padding: 6px 8px;
+  }
+  .impression-label span {
+    display: none;
+  }
+}
+@media print {
+  .impression-label {
+    color: #000;
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid #000;
+    box-shadow: none;
+  }
+  .impression-label span { color: #000; }
+}
+</style>
 <link rel="canonical" href="https://mtclaremontcommunity.github.io/graylandsforensic/the-site.html">
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="The site — plans, scale and timeline — Graylands Forensic Mental Health Campus Expansion">
-<meta property="og:description" content="The actual architectural plans, the government's own masterplan diagram, the published procurement timeline, and what's now visibly under way on the ground — collected in one place, annotated and sourced.">
+<meta property="og:description" content="Official plans, scale and timeline for the Graylands forensic expansion, with clearly labelled campaign artist impressions of the disclosed footprint.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mtclaremontcommunity.github.io/graylandsforensic/the-site.html">
 <meta property="og:site_name" content="Mount Claremont Community Network">
 <meta property="og:image" content="https://mtclaremontcommunity.github.io/graylandsforensic/assets/eoi-site-development-plan.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="The site — plans, scale and timeline — Graylands Forensic Mental Health Campus Expansion">
-<meta name="twitter:description" content="The actual architectural plans, the government's own masterplan diagram, the published procurement timeline, and what's now visibly under way on the ground — collected in one place, annotated and sourced.">
+<meta name="twitter:description" content="Official plans, scale and timeline for the Graylands forensic expansion, with clearly labelled campaign artist impressions of the disclosed footprint.">
 </head>
 <body>
 
@@ -81,7 +182,7 @@
     <section class="hero">
       <span class="eyebrow">THE PLANS · THE SCALE · THE TIMELINE</span>
       <h1>What's actually being built, and when</h1>
-      <p class="sub">Not a rendering, not a rumour. The real architectural drawings, the government's own scale diagram, the published construction schedule, and the first physical work already on the ground — collected here as they're published, with sources for every claim.</p>
+      <p class="sub">Official plans first: the real architectural drawings, the government's own scale diagram, the published construction schedule, and the first physical work already on the ground — followed by clearly marked artist impressions showing what the disclosed scale could mean at eye level.</p>
 
       <div class="hero-photo">
         <img src="assets/eoi-site-development-plan.jpg" alt="Site development plan from the State's 2025 Managing Contractor tender, showing the Adult Secure Main Entry, Hub and Sub-Acute Unit as coloured building footprints against the John XXIII Avenue boundary, and the separate Child and Adolescent Unit within its own fenced perimeter near Brockway Road." class="zoomable" data-full="assets/eoi-site-development-plan-full.jpg">
@@ -89,7 +190,7 @@
       </div>
 
       <div class="callout">
-        <p><strong>This is a living page.</strong> It will grow as more plans, drawings and dated evidence become available — each addition sourced and dated like everything else on this site. Last built: 10 September 2026.</p>
+        <p><strong>This is a living page.</strong> It will grow as more plans, drawings and dated evidence become available — each addition sourced and dated like everything else on this site. Last built: 14 September 2026.</p>
       </div>
     </section>
 
@@ -156,11 +257,11 @@
       <p>Government's own environmental consultant had to map the security architecture layer by layer to work out which trees could stay. Around each of the two new compounds, outside the secure perimeter itself, the design places <strong>three concentric zones</strong>: an external perimeter zone of 6 metres, an internal management zone of a further 6 metres, and — the consultant's own term — a <strong>perimeter sterile zone of 10 metres</strong>. Every tree standing inside any of those zones is marked for removal <a class="cite" href="assets/rps-environmental-impact-summary-gcp-sep2025.pdf" target="_blank" rel="noopener">RPS, Environmental Impact Summary, 1 Sep 2025, pp.2, 18</a>.</p>
 
       <div class="callout">
-        <p><strong>"Sterile zone" is not a vague or generic label. It is a specific, standard term in high-security facility design, and in every context we could find, it means one thing: the clear, monitored strip of ground between two parallel security fences.</strong> Corrections and prison-security literature describes it the same way every time — an outer fence and an inner fence, with the strip between them kept clear so guards and cameras have an unobstructed line of sight to detect anyone crossing it. It's the standard way a facility catches an escape attempt before it reaches the outer line.</p>
-        <p>That's what the term means everywhere else it appears. Whether Graylands' actual fencing matches it — height, mesh type, anti-climb measures, whether it's a genuine double-fence line the way Frankland's own perimeter reportedly is today — has not been published anywhere we can find. The environmental consultant only needed the zones to calculate which trees would be cleared; describing the fence itself wasn't part of that brief, and nothing else on the public record fills the gap. If a double perimeter fence with a monitored clear zone between the lines isn't what's planned here, the government has chosen, in its own commissioned report, the one piece of industry terminology that means exactly that everywhere it's used.</p>
+        <p><strong>These three coloured zones must not be read as three fence lines.</strong> The RPS figure is a vegetation and disturbance assessment. Its coloured bands identify security-related planning and buffer areas around a separately marked "secure perimeter"; they are not a fencing schedule and do not establish how many physical barriers will be built.</p>
+        <p>The later tender site-development plan is the better available guide to alignment. Its linework appears to show a principal secure boundary around each new precinct, together with local courtyard and recreation-yard enclosures. But the published material still does not provide a complete fence legend, elevation or specification. Fence height, mesh, anti-climb treatment, lighting, surveillance and the final number and position of barriers therefore remain unconfirmed.</p>
       </div>
 
-      <p>A double-fenced compound with a monitored sterile zone is what's built for patients under a detention or custody order — the same classification Frankland Centre already holds its patients under, not the informal, unlocked model of a general psychiatric ward. Absconding is already frequent at WA's existing facility, and failures cluster specifically at the transitions between security levels <a class="cc-more" href="concerns.html#concern-1">see Concern 1, the full documented record →</a>. Going from one facility built to that classification to three is not a cosmetic change in how the site looks. It's a threefold increase in the number of security-level boundaries on one campus — and the boundary crossings are exactly where the documented failures happen.</p>
+      <p>A dedicated secure perimeter is used because these facilities hold patients under detention or custody orders — not the informal, unlocked model of a general psychiatric ward. Absconding is already frequent at WA's existing facility, and failures cluster specifically at the transitions between security levels <a class="cc-more" href="concerns.html#concern-1">see Concern 1, the full documented record →</a>. Going from one secure facility to three is not a cosmetic change in how the site looks. It creates two additional secure precincts and many more controlled transitions on one campus — and those transitions are exactly where the documented failures matter.</p>
 
       <div class="plan-gallery">
         <div class="plan-card">
@@ -174,7 +275,54 @@
         </div>
       </div>
 
-      <p class="scale-note">This is a construction and vegetation document, not a security plan, and it doesn't describe fencing heights, lighting or surveillance — none of that has been published. What it shows, in the government's own drawing, is the physical footprint and the industry terminology that a facility of this security classification requires.</p>
+      <p class="scale-note">This is a construction and vegetation document, not a security plan. It shows the managed footprint and the consultant's zone terminology, but it does not establish three fence lines or disclose fence heights, detailed security treatments, lighting or surveillance.</p>
+
+      <section id="artist-impressions" class="artist-impressions" aria-labelledby="artist-impressions-title">
+        <span class="eyebrow">ILLUSTRATIVE ONLY · NOT A GOVERNMENT DESIGN</span>
+        <h3 id="artist-impressions-title">What this scale could look like</h3>
+        <p>The tender drawings show where the buildings and secure boundaries are proposed, but they do not show what the development may look or feel like from ground level. These impressions translate the publicly disclosed footprint into possible views so readers can understand the potential building mass, perimeter length, clearance areas and night-time presence.</p>
+
+        <div class="impression-disclosure" role="note" aria-label="Artist impression disclaimer">
+          <strong>Artist-impression disclaimer:</strong> These are campaign-produced, AI-assisted visualisations — not photographs, government renderings, architectural drawings or approved designs. They were prepared by the Mount Claremont Community Network from the publicly available tender site plan and environmental material as at 14 September 2026. We have not identified any published government external elevations, materials, final fence height or specification, lighting, surveillance design or verified public-view photomontages. Every depicted building, fence detail, landscape treatment, light and viewpoint is therefore illustrative and may differ materially from what is ultimately built. The government documents reproduced above remain the authoritative source for what has actually been disclosed.
+        </div>
+
+        <div class="impression-gallery">
+          <figure class="impression-card">
+            <div class="impression-frame">
+              <img src="assets/artist-impression-three-secure-precincts-aerial.webp" loading="lazy" decoding="async" alt="AI-assisted campaign artist impression of the Graylands campus with the existing Frankland Centre and two possible new secure precincts; this is not an actual or approved design.">
+              <div class="impression-label" aria-hidden="true">
+                <strong>Artist impression — not a government design</strong>
+                <span>Campaign visualisation based on public documents · details may differ materially</span>
+              </div>
+            </div>
+            <figcaption><strong>Possible campus-wide scale.</strong> An illustrative oblique aerial translating the disclosed plan into possible building massing: the existing Frankland precinct together with two additional secure precincts. Building forms, heights, fences, landscaping and camera position are hypothetical; this is not a surveyed or verified photomontage.</figcaption>
+          </figure>
+
+          <figure class="impression-card">
+            <div class="impression-frame">
+              <img src="assets/artist-impression-child-adolescent-ground-view.webp" loading="lazy" decoding="async" alt="AI-assisted campaign artist impression of a possible ground-level view of the Child and Adolescent Unit perimeter; this is not an actual or approved design.">
+              <div class="impression-label" aria-hidden="true">
+                <strong>Artist impression — not a government design</strong>
+                <span>Campaign visualisation based on public documents · details may differ materially</span>
+              </div>
+            </div>
+            <figcaption><strong>Possible Child and Adolescent Unit ground-level view.</strong> This image explores how a long secure perimeter and local recreation-yard enclosure could register from a public route. The exact architecture, visibility, setback, retained vegetation, fence height and security treatment have not been identified in the published material reviewed.</figcaption>
+          </figure>
+
+          <figure class="impression-card">
+            <div class="impression-frame">
+              <img src="assets/artist-impression-adult-subacute-night.webp" loading="lazy" decoding="async" alt="AI-assisted campaign artist impression of a possible night-time view of the Adult and Sub-Acute precinct perimeter; this is not an actual or approved design.">
+              <div class="impression-label" aria-hidden="true">
+                <strong>Artist impression — not a government design</strong>
+                <span>Campaign visualisation based on public documents · details may differ materially</span>
+              </div>
+            </div>
+            <figcaption><strong>Possible Adult and Sub-Acute precinct at night.</strong> This image explores the potential visual presence of a long secure perimeter, monitored clearance area and security lighting after dark. No final lighting, surveillance, elevation or fence design has been identified in the published material reviewed.</figcaption>
+          </figure>
+        </div>
+
+        <p class="scale-note" style="margin-top:0;">Why publish impressions at all? Because plans read from above do not readily convey eye-level scale. These images do not fill the government's information gap with claimed facts; they make the gap visible while showing one plausible scenario based on the limited information available.</p>
+      </section>
     </section>
 
 
