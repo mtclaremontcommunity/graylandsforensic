@@ -167,10 +167,16 @@ function renderUpdateEntry(item) {
    Renders into #qon-feed (table body) and #qon-stats (summary counts),
    whichever is present on the page. Adding a new question, or an answer
    to an existing one, is a one-file edit to qons.json — no HTML change needed.
-   Each entry may carry: answer_full (verbatim official answer text, shown behind
-   a "+ Read the full answer" expander below the summary) and so_what (a short
-   plain-language note on what the answer means for the campaign, rendered as
-   "What this means" AFTER the answer, not after the question). */
+   Fields an entry may carry beyond the original schema:
+   - answer_full: verbatim official answer text. Shown directly, in full, with
+     no click required, when 700 characters or under (FULL_ANSWER_THRESHOLD
+     below) — most answers are short enough for this. Longer ones (a big data
+     table, a multi-part legal answer) fall back to answer_summary shown
+     up front, with answer_full behind a "+ Read the full answer" expander.
+   - answer_summary: required if answer_full exceeds the threshold; optional
+     (used as the sole answer text) if there's no answer_full at all yet.
+   - so_what: a short plain-language note on what the answer means for the
+     campaign, rendered as "What this means" AFTER the answer/expander. */
 
 const PARLIAMENT_QON_BASE = 'https://www.parliament.wa.gov.au/parliament/pquest.nsf/viewLAPQuestByDate/';
 
@@ -218,13 +224,22 @@ function renderQonEntry(item) {
   var statusLabel = item.status === 'pending' ? 'Awaiting answer' : ('Answered ' + formatUpdateDate(item.answered_date));
   var url = item.docId ? (PARLIAMENT_QON_BASE + item.docId + '?opendocument') : item.sourceUrl;
   var linkLabel = item.docId ? 'View on parliament.wa.gov.au' : 'View source Hansard record';
-  var answerHtml = item.answer_summary
-    ? '<p class="body-text"><strong>Answer:</strong> ' + escapeHtml(item.answer_summary) + '</p>'
-    : '';
-  var fullAnswerHtml = item.answer_full
-    ? ('<details class="qon-full-answer"><summary>+ Read the full answer</summary>' +
-       '<p class="body-text qon-full-answer-text">' + escapeHtml(item.answer_full).replace(/\n/g, '<br>') + '</p></details>')
-    : '';
+  var FULL_ANSWER_THRESHOLD = 700;
+  var fullLen = item.answer_full ? item.answer_full.length : 0;
+  var answerHtml = '';
+  var fullAnswerHtml = '';
+  if (item.answer_full && fullLen <= FULL_ANSWER_THRESHOLD) {
+    // Short enough to show verbatim, at a glance — no click required.
+    answerHtml = '<p class="body-text"><strong>Answer:</strong> ' + escapeHtml(item.answer_full).replace(/\n/g, '<br>') + '</p>';
+  } else if (item.answer_full && item.answer_summary) {
+    // Long official answer — show the short version, full verbatim text behind an expander.
+    answerHtml = '<p class="body-text"><strong>Answer:</strong> ' + escapeHtml(item.answer_summary) + '</p>';
+    fullAnswerHtml = '<details class="qon-full-answer"><summary>+ Read the full answer, verbatim</summary>' +
+       '<p class="body-text qon-full-answer-text">' + escapeHtml(item.answer_full).replace(/\n/g, '<br>') + '</p></details>';
+  } else if (item.answer_summary) {
+    // No verbatim text captured yet — fall back to the summary alone.
+    answerHtml = '<p class="body-text"><strong>Answer:</strong> ' + escapeHtml(item.answer_summary) + '</p>';
+  }
   var soWhatHtml = item.so_what
     ? '<p class="body-text qon-so-what"><strong>What this means:</strong> ' + escapeHtml(item.so_what) + '</p>'
     : '';
