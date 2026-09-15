@@ -166,7 +166,11 @@ function renderUpdateEntry(item) {
    Reads qons.json at runtime, same pattern as updates.json above.
    Renders into #qon-feed (table body) and #qon-stats (summary counts),
    whichever is present on the page. Adding a new question, or an answer
-   to an existing one, is a one-file edit to qons.json — no HTML change needed. */
+   to an existing one, is a one-file edit to qons.json — no HTML change needed.
+   Each entry may carry: answer_full (verbatim official answer text, shown behind
+   a "+ Read the full answer" expander below the summary) and so_what (a short
+   plain-language note on what the answer means for the campaign, rendered as
+   "What this means" AFTER the answer, not after the question). */
 
 const PARLIAMENT_QON_BASE = 'https://www.parliament.wa.gov.au/parliament/pquest.nsf/viewLAPQuestByDate/';
 
@@ -217,6 +221,13 @@ function renderQonEntry(item) {
   var answerHtml = item.answer_summary
     ? '<p class="body-text"><strong>Answer:</strong> ' + escapeHtml(item.answer_summary) + '</p>'
     : '';
+  var fullAnswerHtml = item.answer_full
+    ? ('<details class="qon-full-answer"><summary>+ Read the full answer</summary>' +
+       '<p class="body-text qon-full-answer-text">' + escapeHtml(item.answer_full).replace(/\n/g, '<br>') + '</p></details>')
+    : '';
+  var soWhatHtml = item.so_what
+    ? '<p class="body-text qon-so-what"><strong>What this means:</strong> ' + escapeHtml(item.so_what) + '</p>'
+    : '';
   var linkHtml = url ? ('<p><a class="cite" href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + linkLabel + '</a></p>') : '';
   return (
     '<div class="update-entry">' +
@@ -228,6 +239,8 @@ function renderQonEntry(item) {
       '<p class="body-text" style="font-size:0.85rem;color:var(--slate);">Asked by ' + escapeHtml(item.member) + ' \u00b7 ' + escapeHtml(item.portfolio) + '</p>' +
       '<p class="body-text">' + escapeHtml(item.question) + '</p>' +
       answerHtml +
+      fullAnswerHtml +
+      soWhatHtml +
       linkHtml +
     '</div>'
   );

@@ -365,6 +365,16 @@ details.faq .a { padding-bottom: 18px; color: var(--slate); }
 .faq-category { font-family: 'IBM Plex Mono', monospace; font-size: 0.75rem; letter-spacing: 0.07em; text-transform: uppercase; color: var(--brick); margin: 32px 0 12px; }
 .faq-category:first-child { margin-top: 8px; }
 
+/* ---------- QoN tracker: expandable full answer text ---------- */
+details.qon-full-answer { margin: 4px 0 10px; }
+details.qon-full-answer summary {
+  cursor: pointer; font-weight: 600; font-size: 0.85rem; color: var(--brick); list-style: none; padding: 2px 0;
+}
+details.qon-full-answer summary::-webkit-details-marker { display: none; }
+details.qon-full-answer[open] summary { margin-bottom: 6px; }
+.qon-full-answer-text { font-size: 0.88rem; color: var(--slate); background: var(--panel); border-left: 2px solid var(--hairline); padding: 10px 14px; margin: 0; }
+.qon-so-what { border-top: 1px solid var(--hairline); padding-top: 10px; margin-top: 10px; }
+
 /* ---------- Sources list ---------- */
 .source-group h3 { margin-top: 2em; }
 .source-row {
